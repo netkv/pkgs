@@ -9,14 +9,11 @@ Usage:
 ---------------------------------------------------------------------------------
 
 install script:
-
-spkg install script-url
+spkg install script-url (you will be asked for name that you want save script as)
 
 update script:
-
 spkg update script-name
 
 remove script:
-
 spkg remove script-name
 
