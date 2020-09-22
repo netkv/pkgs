@@ -1,4 +1,5 @@
 Usage:
+install: spkg install script-name (installs packages from this repo: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repo-index, be free to pr or make issue to add another package)
 sync script from url: spkg sync script-url (you will be asked for name that you want save script as)
 update script: spkg update script-name
 remove script: spkg remove script-name
