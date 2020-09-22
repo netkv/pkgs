@@ -1,1 +1,4 @@
 pkgdir=$(cat ~/.config/spkg/destination)
+echo what action?:
+read act
+echo "$act is not currently supported"
