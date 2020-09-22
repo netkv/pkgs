@@ -9,6 +9,8 @@ tested in linux and android termux
 
 use installer: wget https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/installer; sleep 5; sh installer
 
+use with sudo to install into root writable only directories (recommended)
+
 and after that delete installer
 
 or:
