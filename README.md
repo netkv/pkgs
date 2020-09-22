@@ -1,7 +1,11 @@
 # scriptpkg
 package manager to update bash, powershell and maybe other scripts from source and make work easier
 
-**SPKG IS NOT CURRENTLY IN USABLE FORM**
+**instalation**
+
+download "spkg" file and put it into /usr/local/bin and make it executable using gui or chmod +x
+
+create file  ~/.config/spkg/destination and write to it destination folder that you want to have scripts saved in
 
 needs: wget, sh
 
