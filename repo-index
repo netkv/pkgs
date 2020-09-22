@@ -1,3 +1,4 @@
-spkg=https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg
-cd ~/.config/spkg/; touch cache-install; echo "$"$1 >> cache-install
 
+spkg=https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg
+fetsh=https://raw.githubusercontent.com/6gk/fet.sh/master/fet.sh
+spkg sync {!1}
