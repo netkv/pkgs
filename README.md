@@ -1,5 +1,5 @@
 # scriptpkg
-package manager to update bash, powershell and maybe other scripts from source and make work easier
+script manager to update remove and install shell scripts and make installing and updating them easier
 
 **instalation**
 
