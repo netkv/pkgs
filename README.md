@@ -19,7 +19,7 @@ download "spkg" file and put it into folder that you want and make it executable
 
 create file  ~/.config/spkg/destination and write to it destination folder that you want to have scripts saved in (dont forget if you want to install them into root writable only directory you need use sudo and then config dir is /root/.config/spkg
 
-needs: wget, sh, cat
+needs: wget, sh, cat, bash (only for "install" command)
 
 **update spkg itself**
 
