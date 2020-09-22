@@ -1,4 +1,23 @@
 pkgdir=$(cat ~/.config/spkg/destination)
-echo what action?:
-read act
-echo "$act is not currently supported"
+if [ $1 = install ]; then
+ pkgurl=$2
+ echo what name you want to call that script"("suggested: $(basename $pkgurl)")"?
+ read pkgname
+ cd $pkgdir
+ wget -O $pkgname $pkgurl
+ cd ~/.config/spkg/
+ touch $pkgname
+ echo $pkgurl >> $pkgname
+else
+ if [ $1 = update ]; then
+  pkgname=$2
+  cd $pkgdir
+  rm $pkgname
+  cd ~/.config/spkg/
+  pkgurl=$(cat $pkgname)
+  cd $pkgdir
+  wget -O $pkgname $pkgurl
+ else
+  echo "$1 is not currently supported"
+ fi
+fi
