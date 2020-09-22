@@ -1,6 +1,8 @@
 # scriptpkg
 script manager to update remove and install shell scripts and make installing and updating them easier
 
+**TESTED ONLY ON LINUX!!!**
+
 **instalation**
 
 download "spkg" file and put it into /usr/local/bin and make it executable using gui or chmod +x
