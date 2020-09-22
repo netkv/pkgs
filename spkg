@@ -6,28 +6,37 @@ if [ $1 = sync ]; then
  read pkgname
  cd $pkgdir
  wget -O $pkgname $pkgurl
+ echo $(tput setaf 4) "making script executable" $(tput sgr0)
  chmod +x $pkgname
+ echo $(tput setaf 4) "adding config file" $(tput sgr0)
  cd ~/.config/spkg/packages
  if [ -f $pkgname ]; then
+  echo $(tput setaf 4) "deleting old config file" $(tput sgr0)
   rm $pkgname
  fi
  touch $pkgname
  echo $pkgurl >> $pkgname
+ echo $(tput setaf 4) "done" $(tput sgr0)
 else
  if [ $1 = update ]; then
   pkgname=$2
   cd $pkgdir
+  echo $(tput setaf 4) "removing old script" $(tput sgr0)
   rm $pkgname
+  echo $(tput setaf 4) "getting script config" $(tput sgr0)
   cd ~/.config/spkg/packages
   pkgurl=$(cat $pkgname)
   cd $pkgdir
   wget -O $pkgname $pkgurl
+  echo $(tput setaf 4) "making script executable" $(tput sgr0)
   chmod +x $pkgname
  else
   if [ $1 = remove ]; then
    pkgname=$2
+   echo $(tput setaf 4) "removing script" $(tput sgr0)
    cd $pkgdir
    rm $pkgname
+   echo $(tput setaf 4) "removing script config" $(tput sgr0)
    cd ~/.config/spkg/packages
    rm $pkgname
   else
@@ -38,8 +47,10 @@ else
      pkgname=$2
      cd ~/.config/spkg/
      wget -O repo https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repo-index
+     echo $(tput setaf 4) "executing repo index" $(tput sgr0)
      chmod +x repo
      sh repo $pkgname
+     echo $(tput setaf 4) "removing repo index" $(tput sgr0)
      rm repo
     else
      echo "$1 is not currently supported"
