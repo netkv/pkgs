@@ -9,8 +9,14 @@ Usage:
 ---------------------------------------------------------------------------------
 
 install script:
+
 spkg install script-url
+
 update script:
+
 spkg update script-name
+
 remove script: (not currently working)
+
 spkg remove script-name
+
