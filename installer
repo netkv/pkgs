@@ -1,1 +1,15 @@
-
+#!/bin/sh
+echo select directory to install spkg
+read spkgpatch
+echo select directory to install scripts
+read sdir
+cd $spkgpatch
+wget https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg
+chmod +x spkg
+cd ~/.config/
+mkdir spkg
+cd spkg
+touch destination
+echo $sdir >> destination
+touch spkg
+echo https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg >> spkg
