@@ -1,7 +1,9 @@
 # scriptpkg
 script manager to update remove and install shell scripts and make installing and updating them easier
 
-**TESTED ONLY ON LINUX!!!**
+**where works?**
+
+tested in linux and android termux
 
 **instalation**
 
