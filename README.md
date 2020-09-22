@@ -12,15 +12,6 @@ create file  ~/.config/spkg/destination and write to it destination folder that 
 needs: wget, sh, cat
 
 ---------------------------------------------------------------------------------
-Usage:
+Usage: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
 ---------------------------------------------------------------------------------
-
-install script:
-spkg install script-url (you will be asked for name that you want save script as)
-
-update script:
-spkg update script-name
-
-remove script:
-spkg remove script-name
 
