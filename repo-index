@@ -1,4 +1,8 @@
 
 spkg=https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg
 fetsh=https://raw.githubusercontent.com/6gk/fet.sh/master/fet.sh
+neofetch=https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
+nanofetch=https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch
+nanofetchpwsh=https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch-pwsh
+sbashfm=https://raw.githubusercontent.com/Pan00Pernicek/sbashfm/master/sbashfm
 spkg sync ${!1}
