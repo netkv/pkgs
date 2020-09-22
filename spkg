@@ -1,3 +1,4 @@
+#!/bin/sh
 pkgdir=$(cat ~/.config/spkg/destination)
 if [ $1 = install ]; then
  pkgurl=$2
