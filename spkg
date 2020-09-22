@@ -1,0 +1,1 @@
+pkgdir=$(cat ~/.config/spkg/destination)
