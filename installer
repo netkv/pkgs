@@ -11,5 +11,7 @@ mkdir spkg
 cd spkg
 touch destination
 echo $sdir >> destination
+mkdir packages
+cd packages
 touch spkg
 echo https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg >> spkg
