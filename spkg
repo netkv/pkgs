@@ -31,8 +31,17 @@ else
    if [ $1 = list ]; then
     ls ~/.config/spkg/packages
    else
-    echo "$1 is not currently supported"
-    curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
+    if [ $1 = install ]; then
+     pkgname=$2
+     cd ~/.config/spkg/
+     wget -O repo https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repo-index
+     chmod +x repo
+     sh repo $pkgname
+     rm repo
+    else
+     echo "$1 is not currently supported"
+     curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
+    fi
    fi
   fi
  fi
