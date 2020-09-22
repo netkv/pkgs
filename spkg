@@ -18,6 +18,14 @@ else
   cd $pkgdir
   wget -O $pkgname $pkgurl
  else
-  echo "$1 is not currently supported"
+  if [ $1 = remove ]; then
+   pkgname=$2
+   cd $pkgdir
+   rm $pkgname
+   cd ~/.config/spkg/
+   rm $pkgname
+  else
+   echo "$1 is not currently supported"
+  fi
  fi
 fi
