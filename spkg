@@ -29,7 +29,7 @@ else
    rm $pkgname
   else
    echo "$1 is not currently supported"
-   curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage | echo
+   curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
   fi
  fi
 fi
