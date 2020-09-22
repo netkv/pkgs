@@ -1,1 +1,3 @@
 spkg=https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg
+cd ~/.config/spkg/; touch cache-install; echo $1 >> cache-install
+
