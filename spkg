@@ -7,7 +7,7 @@ if [ $1 = install ]; then
  cd $pkgdir
  wget -O $pkgname $pkgurl
  chmod +x $pkgname
- cd ~/.config/spkg/
+ cd ~/.config/spkg/packages
  touch $pkgname
  echo $pkgurl >> $pkgname
 else
@@ -15,7 +15,7 @@ else
   pkgname=$2
   cd $pkgdir
   rm $pkgname
-  cd ~/.config/spkg/
+  cd ~/.config/spkg/packages
   pkgurl=$(cat $pkgname)
   cd $pkgdir
   wget -O $pkgname $pkgurl
@@ -25,11 +25,15 @@ else
    pkgname=$2
    cd $pkgdir
    rm $pkgname
-   cd ~/.config/spkg/
+   cd ~/.config/spkg/packages
    rm $pkgname
   else
-   echo "$1 is not currently supported"
-   curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
+   if [ $1 = list ]; then
+    ls ~/.config/spkg/packages
+   else
+    echo "$1 is not currently supported"
+    curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
+   fi
   fi
  fi
 fi
