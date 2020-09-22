@@ -49,7 +49,7 @@ else
      wget -O repo https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repo-index
      echo $(tput setaf 4) "executing repo index" $(tput sgr0)
      chmod +x repo
-     sh repo $pkgname
+     bash repo $pkgname
      echo $(tput setaf 4) "removing repo index" $(tput sgr0)
      rm repo
     else
