@@ -8,6 +8,9 @@ if [ $1 = sync ]; then
  wget -O $pkgname $pkgurl
  chmod +x $pkgname
  cd ~/.config/spkg/packages
+ if [ -f $pkgname ]; then
+  rm $pkgname
+ fi
  touch $pkgname
  echo $pkgurl >> $pkgname
 else
