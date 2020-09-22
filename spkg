@@ -6,6 +6,7 @@ if [ $1 = install ]; then
  read pkgname
  cd $pkgdir
  wget -O $pkgname $pkgurl
+ chmod +x $pkgname
  cd ~/.config/spkg/
  touch $pkgname
  echo $pkgurl >> $pkgname
@@ -18,6 +19,7 @@ else
   pkgurl=$(cat $pkgname)
   cd $pkgdir
   wget -O $pkgname $pkgurl
+  chmod +x $pkgname
  else
   if [ $1 = remove ]; then
    pkgname=$2
