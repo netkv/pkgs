@@ -16,7 +16,7 @@ update script:
 
 spkg update script-name
 
-remove script: (not currently working)
+remove script:
 
 spkg remove script-name
 
