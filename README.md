@@ -19,6 +19,12 @@ create file  ~/.config/spkg/destination and write to it destination folder that 
 
 needs: wget, sh, cat
 
+**update spkg itself**
+
+create file ~/.config/spkg/spkg with content: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg if that file doesnt exist already
+
+then just spkg update spkg
+
 ---------------------------------------------------------------------------------
 Usage: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
 ---------------------------------------------------------------------------------
