@@ -3,7 +3,7 @@ script manager to update remove and install shell scripts and make installing an
 
 **where works?**
 
-tested in linux and android termux
+tested in linux, android termux and freebsd
 
 **instalation**
 
