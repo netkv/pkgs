@@ -7,7 +7,7 @@ tested in linux, android termux and freebsd
 
 **instalation**
 
-use installer: wget https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/installer; sleep 5; sh installer
+***use installer: wget https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/installer; sleep 5; sh installer*** (recommended)
 
 use with sudo to install into root writable only directories (recommended)
 
