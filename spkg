@@ -10,12 +10,8 @@ if [ $1 = sync ]; then
  chmod +x $pkgname
  echo $(tput setaf 4) "adding config file" $(tput sgr0)
  cd ~/.config/spkg/packages
- if [ -f $pkgname ]; then
-  echo $(tput setaf 4) "deleting old config file" $(tput sgr0)
-  rm $pkgname
- fi
  touch $pkgname
- echo $pkgurl >> $pkgname
+ echo $pkgurl > $pkgname
  echo $(tput setaf 4) "done" $(tput sgr0)
 else
  if [ $1 = update ]; then
@@ -46,15 +42,29 @@ else
     if [ $1 = install ]; then
      pkgname=$2
      cd ~/.config/spkg/
-     wget -O repo https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repo-index
+     echo select repo "("options: $(ls repos)")"
+     read pkginrepo
+     wget -O repo $(cat repos/$pkginrepo)
      echo $(tput setaf 4) "executing repo index" $(tput sgr0)
      chmod +x repo
      bash repo $pkgname
      echo $(tput setaf 4) "removing repo index" $(tput sgr0)
      rm repo
     else
-     echo "$1 is not currently supported"
-     curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
+     if [ $1 = repo ]; then
+      if [ $2 = add ]; then
+       pkgrepo=$3
+       cd ~/.config/spkg/repos
+       echo what name you want to call that repo"("suggested: $(basename $pkgrepo)")"?
+       read pkgreponame
+       touch $pkgreponame
+       echo $pkgrepo > $pkgreponame
+       echo $(tput setaf 4) "added repo $pkgreponame with address $pkgrepo" $(tput sgr0)
+      fi
+     else
+      echo "$1 is not currently supported"
+      curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
+     fi
     fi
    fi
   fi
