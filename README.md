@@ -45,4 +45,18 @@ other repos: https://github.com/Pan00Pernicek/scriptpkg/blob/master/repo-index
 
 *to manage sripts easier*
 
+**creating repo:**
 
+you can use anything online that stores **raw text only** **(recommended github)**
+
+then add scripts to it using this template
+
+```script_name=script_url```
+
+and at end of that file put:
+
+```spkg sync ${!1}```
+
+then add it using __spkg repo add url__
+
+*and if you want then you can pull request or inform me in any other way to add it into https://github.com/Pan00Pernicek/scriptpkg/blob/master/repo-index*
