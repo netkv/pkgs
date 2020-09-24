@@ -31,5 +31,5 @@ then just: spkg update spkg
 Usage: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
 ---------------------------------------------------------------------------------
 Script Repo: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repo-index
----------------------------------------------------------------------------------
+
 
