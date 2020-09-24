@@ -33,11 +33,16 @@ create file ~/.config/spkg/packages/spkg with content: https://raw.githubusercon
 
 then just: __spkg update spkg__
 
----------------------------------------------------------------------------------
-Usage: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
----------------------------------------------------------------------------------
+# Usage: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
+
 Main script Repo: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repos/main
 
 other repos: https://github.com/Pan00Pernicek/scriptpkg/blob/master/repo-index
+
+*example usage cases*
+
+*to sync scripts between devices*
+
+*to manage sripts easier*
 
 
