@@ -1,6 +1,6 @@
 Usage:
 -------------------------------------------------------------
-install: spkg install script-name (installs scripts from this repo: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repo-index, be free to pr or make issue to add another package)
+install: spkg install script-name (installs scripts from this repo: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repo-index, be free to pr or make issue to add another script)
 -------------------------------------------------------------
 sync script from url: spkg sync script-url (you will be asked for name that you want save script as)
 -------------------------------------------------------------
