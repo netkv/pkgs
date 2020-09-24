@@ -14,4 +14,9 @@ echo $sdir >> destination
 mkdir packages
 cd packages
 touch spkg
-echo https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg >> spkg
+echo https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg > spkg
+cd ..
+mkdir repos
+cd repos
+touch main
+echo https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repos/main > main
