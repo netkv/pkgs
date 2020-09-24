@@ -33,6 +33,10 @@ create file ~/.config/spkg/packages/spkg with content: https://raw.githubusercon
 
 then just: __spkg update spkg__
 
+**sometimes changing of how config is handled will break scriptpkg**
+
+needs manual fix then
+
 # Usage: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
 
 Main script Repo: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repos/main
