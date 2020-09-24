@@ -30,6 +30,7 @@ needs: wget, sh, cat, bash (only for "install" command), curl (only for usage an
 **update spkg itself**
 
 create file ~/.config/spkg/packages/spkg with content: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg if that file doesnt exist already
+(!!!NOT JUST URL LINK, NO END WEBPAGE!!!)
 
 then just: __spkg update spkg__
 
