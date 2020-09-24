@@ -1,1 +1,15 @@
-world repo
+spkg=https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg
+fetsh=https://raw.githubusercontent.com/6gk/fet.sh/master/fet.sh
+neofetch=https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
+nanofetch=https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch
+nanofetchpwsh=https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch-pwsh
+sbashfm=https://raw.githubusercontent.com/Pan00Pernicek/sbashfm/master/sbashfm
+bashtop=https://raw.githubusercontent.com/aristocratos/bashtop/master/bashtop
+meme=https://raw.githubusercontent.com/alexanderepstein/Bash-Snippets/master/meme/meme
+currency=https://raw.githubusercontent.com/alexanderepstein/Bash-Snippets/master/currency/currency
+bashcheck=https://raw.githubusercontent.com/hannob/bashcheck/master/bashcheck
+helloworld=https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/hello-world.sh
+spattern=https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/special-pattern.sh
+encrypt=https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/encrypt.sh
+dirsize=https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/directorysize.sh
+spkg sync ${!1}
