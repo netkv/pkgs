@@ -14,4 +14,6 @@ add repo: spkg repo add repo-url
 -------------------------------------------------------------
 remove repo: spkg repo remove repo-name
 -------------------------------------------------------------
+get list of core repos that exist: spkg repo getlist
+-------------------------------------------------------------
 more info: https://github.com/Pan00Pernicek/scriptpkg
