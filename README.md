@@ -30,8 +30,8 @@ then just: spkg update spkg
 ---------------------------------------------------------------------------------
 Usage: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
 ---------------------------------------------------------------------------------
-Script Repo: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repo-index
+Main script Repo: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repos/main
 
-multiple repo management coming soon
+other repos: https://github.com/Pan00Pernicek/scriptpkg/blob/master/repo-index
 
 
