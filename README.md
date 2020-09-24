@@ -7,9 +7,9 @@ tested in linux, android termux and freebsd
 
 **instalation**
 
-***use installer: wget https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/installer; sleep 5; sh installer*** (recommended)
+use installer: __wget https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/installer; sleep 5; sh installer__ ***(recommended)***
 
-use with sudo to install into root writable only directories (recommended)
+use with sudo to install into root writable only directories ***(recommended)***
 
 and after that delete installer
 
@@ -31,7 +31,7 @@ needs: wget, sh, cat, bash (only for "install" command), curl (only for usage an
 
 create file ~/.config/spkg/packages/spkg with content: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg if that file doesnt exist already
 
-then just: spkg update spkg
+then just: __spkg update spkg__
 
 ---------------------------------------------------------------------------------
 Usage: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
