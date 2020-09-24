@@ -25,7 +25,7 @@ create folder  ~/.config/spkg/repos
 
 and then add repos that you want
 
-needs: wget, sh, cat, bash (only for "install" command)
+needs: wget, sh, cat, bash (only for "install" command), curl (only for usage and repo list)
 
 **update spkg itself**
 
