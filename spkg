@@ -66,7 +66,14 @@ else
         cd ~/.config/spkg/repos
         rm $pkgrmrepo
        else
-        echo wrong repo action
+        if [ $2 = getlist ]; then
+         echo current core repos:
+         curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repo-index
+         echo add one by: spkg repo add repo-url
+        else
+         echo "$2 is not currently supported"
+         curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
+        fi
        fi
       fi
      else
