@@ -1,5 +1,5 @@
 # scriptpkg
-script manager to update remove and install shell scripts and make installing and updating them easier
+script manager to update remove and install shell scripts (and appimages) and make installing and updating them easier
 
 **where works?**
 
@@ -49,15 +49,15 @@ other repos: https://github.com/Pan00Pernicek/scriptpkg/blob/master/repo-index
 
 *to sync scripts between devices*
 
-*to manage sripts easier*
+*to manage apps and scripts easier*
 
 **creating repo:**
 
 you can use anything online that stores **raw text only** **(recommended github)**
 
-then add scripts to it using this template
+then add items to it using this template
 
-```script_name=script_url```
+```name=url```
 
 and at end of that file put:
 
