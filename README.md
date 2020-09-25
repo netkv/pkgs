@@ -38,7 +38,8 @@ then just: __spkg update spkg__
 
 needs manual fix then
 
-# Usage: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
+# Usage: 
+https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
 
 Main script Repo: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repos/main
 
