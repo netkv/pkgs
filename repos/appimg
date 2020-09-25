@@ -1,1 +1,2 @@
 #appimage repo testing
+etcher64=https://github.com/balena-io/etcher/releases/download/v1.5.109/balenaEtcher-1.5.109-x64.AppImage
