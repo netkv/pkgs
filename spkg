@@ -6,33 +6,33 @@ if [ $1 = sync ]; then
  read pkgname
  cd $pkgdir
  wget -O $pkgname $pkgurl
- echo $(tput setaf 4) "making script executable" $(tput sgr0)
+ echo $(tput setaf 5) "making script executable" $(tput sgr0)
  chmod +x $pkgname
- echo $(tput setaf 4) "adding config file" $(tput sgr0)
+ echo $(tput setaf 6) "adding config file" $(tput sgr0)
  cd ~/.config/spkg/packages
  touch $pkgname
  echo $pkgurl > $pkgname
- echo $(tput setaf 4) "done" $(tput sgr0)
+ echo $(tput setaf 2) "done" $(tput sgr0)
 else
  if [ $1 = update ]; then
   pkgname=$2
   cd $pkgdir
-  echo $(tput setaf 4) "removing old script" $(tput sgr0)
+  echo $(tput setaf 1) "removing old script" $(tput sgr0)
   rm $pkgname
-  echo $(tput setaf 4) "getting script config" $(tput sgr0)
+  echo $(tput setaf 6) "getting script config" $(tput sgr0)
   cd ~/.config/spkg/packages
   pkgurl=$(cat $pkgname)
   cd $pkgdir
   wget -O $pkgname $pkgurl
-  echo $(tput setaf 4) "making script executable" $(tput sgr0)
+  echo $(tput setaf 5) "making script executable" $(tput sgr0)
   chmod +x $pkgname
  else
   if [ $1 = remove ]; then
    pkgname=$2
-   echo $(tput setaf 4) "removing script" $(tput sgr0)
+   echo $(tput setaf 1) "removing script" $(tput sgr0)
    cd $pkgdir
    rm $pkgname
-   echo $(tput setaf 4) "removing script config" $(tput sgr0)
+   echo $(tput setaf 1) "removing script config" $(tput sgr0)
    cd ~/.config/spkg/packages
    rm $pkgname
   else
@@ -45,10 +45,10 @@ else
      echo select repo "("options: $(ls repos)")"
      read pkginrepo
      wget -O repo $(cat repos/$pkginrepo)
-     echo $(tput setaf 4) "executing repo index" $(tput sgr0)
+     echo $(tput setaf 6) "executing repo index" $(tput sgr0)
      chmod +x repo
      bash repo $pkgname
-     echo $(tput setaf 4) "removing repo index" $(tput sgr0)
+     echo $(tput setaf 1) "removing repo index" $(tput sgr0)
      rm repo
     else
      if [ $1 = repo ]; then
@@ -59,7 +59,7 @@ else
        read pkgreponame
        touch $pkgreponame
        echo $pkgrepo > $pkgreponame
-       echo $(tput setaf 4) "added repo $pkgreponame with address $pkgrepo" $(tput sgr0)
+       echo $(tput setaf 2) "added repo $pkgreponame with address $pkgrepo" $(tput sgr0)
       else
        if [ $2 = remove ]; then
         pkgrmrepo=$3
