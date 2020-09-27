@@ -81,7 +81,7 @@ else
        if [ $2 = destination ]; then
         cat ~/.config/spkg/destination
        else
-        cat ~./config/spkg/packages/$3
+        cat ~/.config/spkg/packages/$3
        fi
       else
        echo "$1 is not currently supported"
