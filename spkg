@@ -1,18 +1,24 @@
 #!/bin/sh
 pkgdir=$(cat ~/.config/spkg/destination)
 if [ $1 = sync ]; then
- pkgurl=$2
- echo what name you want to call that script"("suggested: $(basename $pkgurl)")"?
- read pkgname
- cd $pkgdir
- wget -O $pkgname $pkgurl
- echo $(tput setaf 5) "making script executable" $(tput sgr0)
- chmod +x $pkgname
- echo $(tput setaf 6) "adding config file" $(tput sgr0)
- cd ~/.config/spkg/packages
- touch $pkgname
- echo $pkgurl > $pkgname
- echo $(tput setaf 2) "done" $(tput sgr0)
+ if [ -z "$3" ];
+  pkgurl=$2
+  echo what name you want to call that script"("suggested: $(basename $pkgurl)")"?
+  read pkgname
+  spkg sync $pkgurl $pkgname
+ else
+  pkgurl=$2
+  pkgname=$3
+  cd $pkgdir
+  wget -O $pkgname $pkgurl
+  echo $(tput setaf 5) "making script executable" $(tput sgr0)
+  chmod +x $pkgname
+  echo $(tput setaf 6) "adding config file" $(tput sgr0)
+  cd ~/.config/spkg/packages
+  touch $pkgname
+  echo $pkgurl > $pkgname
+  echo $(tput setaf 2) "done" $(tput sgr0)
+ fi
 else
  if [ $1 = update ]; then
   pkgname=$2
