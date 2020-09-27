@@ -2,7 +2,7 @@ Usage:
 -------------------------------------------------------------
 install: spkg install item-name (you will be asked for repo that you want install from)
 -------------------------------------------------------------
-sync script from url: spkg sync item-url (you will be asked for name that you want save script as)
+sync script from url: spkg sync item-url wanted-item-name (you will be asked for name that you want save script as if you wont enter name )
 -------------------------------------------------------------
 update script: spkg update item-name
 -------------------------------------------------------------
