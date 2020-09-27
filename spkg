@@ -77,8 +77,16 @@ else
        fi
       fi
      else
-      echo "$1 is not currently supported"
-      curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
+      if [ $1 = catconf ]; then
+       if [ $2 = destination ]; then
+        cat ~/.config/spkg/destination
+       else
+        cat ~./config/spkg/packages/$3
+       fi
+      else
+       echo "$1 is not currently supported"
+       curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
+      fi
      fi
     fi
    fi
