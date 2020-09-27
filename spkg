@@ -1,7 +1,7 @@
 #!/bin/sh
 pkgdir=$(cat ~/.config/spkg/destination)
 if [ $1 = sync ]; then
- if [ -z "$3" ];
+ if [ -z "$3" ]; then
   pkgurl=$2
   echo what name you want to call that script"("suggested: $(basename $pkgurl)")"?
   read pkgname
