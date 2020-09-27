@@ -1,0 +1,4 @@
+#test
+#pacman package manager integration
+pacman -S $1
+#useless i know
