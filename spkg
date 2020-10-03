@@ -23,15 +23,19 @@ else
  if [ $1 = update ]; then
   pkgname=$2
   cd $pkgdir
-  echo $(tput setaf 1) "removing old script" $(tput sgr0)
-  rm $pkgname
-  echo $(tput setaf 6) "getting script config" $(tput sgr0)
-  cd ~/.config/spkg/packages
-  pkgurl=$(cat $pkgname)
-  cd $pkgdir
-  wget -O $pkgname $pkgurl
-  echo $(tput setaf 5) "making script executable" $(tput sgr0)
-  chmod +x $pkgname
+  if [ -f ~/.config/spkg/packages/$pkgname ]
+   echo $(tput setaf 1) "removing old script" $(tput sgr0)
+   rm $pkgname
+   echo $(tput setaf 6) "getting script config" $(tput sgr0)
+   cd ~/.config/spkg/packages
+   pkgurl=$(cat $pkgname)
+   cd $pkgdir
+   wget -O $pkgname $pkgurl
+   echo $(tput setaf 5) "making script executable" $(tput sgr0)
+   chmod +x $pkgname
+  else
+   echo package doesnt exist
+  fi
  else
   if [ $1 = remove ]; then
    pkgname=$2
