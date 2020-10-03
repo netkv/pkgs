@@ -12,4 +12,5 @@ helloworld=https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/s
 spattern=https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/special-pattern.sh
 encrypt=https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/encrypt.sh
 dirsize=https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/directorysize.sh
+fff=https://raw.githubusercontent.com/dylanaraps/fff/master/fff
 spkg sync ${!1}
