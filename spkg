@@ -23,7 +23,7 @@ else
  if [ $1 = update ]; then
   pkgname=$2
   cd $pkgdir
-  if [ -f ~/.config/spkg/packages/$pkgname ]
+  if [ -f ~/.config/spkg/packages/$pkgname ]; then
    echo $(tput setaf 1) "removing old script" $(tput sgr0)
    rm $pkgname
    echo $(tput setaf 6) "getting script config" $(tput sgr0)
