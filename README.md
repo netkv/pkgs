@@ -1,11 +1,11 @@
 # scriptpkg
-script manager to update remove and install shell scripts (and appimages) and make installing and updating them easier
+A script package manager to update remove and install shell scripts (and appimages) and make installing and updating them easier.
 
-**where works?**
+**Where does it works?**
 
-tested in linux, android termux and freebsd
+Tested on Linux, Android Termux and FreeBSD. It may work on WSL.
 
-**instalation**
+**Instalation**
 
 use installer: __wget https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/installer; sleep 5; sh installer__ ***(recommended)***
 
