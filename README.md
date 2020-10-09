@@ -7,7 +7,7 @@ Tested on Linux, Android Termux and FreeBSD. It may work on WSL.
 
 **Instalation**
 
-use installer: __wget https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/installer; sleep 5; sh installer__ ***(recommended)***
+use installer: __wget https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/installer; sh installer__ ***(recommended)***
 
 use with sudo to install into root writable only directories ***(recommended)***
 
