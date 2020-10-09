@@ -13,4 +13,5 @@ spattern=https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scr
 encrypt=https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/encrypt.sh
 dirsize=https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/directorysize.sh
 fff=https://raw.githubusercontent.com/dylanaraps/fff/master/fff
+pipes=https://raw.githubusercontent.com/pipeseroni/pipes.sh/master/pipes.sh
 spkg sync ${!1}
