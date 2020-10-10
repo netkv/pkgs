@@ -3,8 +3,8 @@ pkgdir=$(cat ~/.config/spkg/destination)
 if [ $1 = sync ]; then
  if [ $2 = file ]; then
   pkgurl=$3
-  pkgname=$(basename $dest)
   dest=$4
+  pkgname=$(basename $dest)
   cd $(dirname $dest)
   wget -O $(basename $dest) $pkgurl
   echo make file executable y/n ?
