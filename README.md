@@ -1,4 +1,7 @@
 # scriptpkg
+
+**!!!If you installed spkg before 10/10 2020 reinstall it, due to config changes it wont work anymore, (remove spkg folder in .config and spkg file in directory where you installed spkg!!!**
+
 A script package manager to update remove and install shell scripts (and appimages) and make installing and updating them easier.
 
 **Where does it works?**
