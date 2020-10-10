@@ -28,7 +28,7 @@ if [ $1 = update ]; then
   #rm $pkgname
   echo $(tput setaf 6) "Getting script config...." $(tput sgr0)
   pkgurl=$(spkg catconf $pkgname)
-  spkg remove $pkgname
+  #spkg remove $pkgname #testing
   spkg sync $pkgurl $pkgname
   #cd ~/.config/spkg/packages
   #pkgurl=$(cat $pkgname)
