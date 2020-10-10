@@ -97,6 +97,7 @@ if [ $1 = add ]; then
  wget -O syncfile $syncfile
  chmod +x syncfile
  ./syncfile
+ rm syncfile
 fi
 #echo "$1 is not currently supported"
 #curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
