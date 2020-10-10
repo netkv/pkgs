@@ -92,5 +92,11 @@ if [ $1 = catconf ]; then
   cat ~/.config/spkg/packages/$2
  fi
 fi
+if [ $1 = add ]; then
+ syncfile=$2
+ wget -O syncfile $syncfile
+ chmod +x syncfile
+ ./syncfile
+fi
 #echo "$1 is not currently supported"
 #curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
