@@ -16,7 +16,26 @@ if [ $1 = sync ]; then
   echo $(tput setaf 6) "Adding config file....." $(tput sgr0)
   cd ~/.config/spkg/packages
   touch $pkgname
-  echo $pkgurl > $pkgname
+  echo $pkgurl"/url" > $pkgname
+  echo $(tput setaf 2) "Done!" $(tput sgr0)
+ fi
+ if [ !-z "$4" ]; then
+  pkgurl=$2
+  pkgname=$3
+  dest=$4
+  cd $(dirname $dest)
+  wget -O $(basename $dest) $pkgurl
+  make file executable y/n ?
+  read execque
+  if [ $execque = y ]; then
+   echo $(tput setaf 5) "Making script executable...." $(tput sgr0)
+   chmod +x $pkgname
+  fi
+  echo $(tput setaf 6) "Adding config file....." $(tput sgr0)
+  cd ~/.config/spkg/packages
+  touch $pkgname
+  echo $pkgurl"/url" > $pkgname
+  echo $dest"/destination" >> $pkgname
   echo $(tput setaf 2) "Done!" $(tput sgr0)
  fi
 fi
@@ -29,7 +48,7 @@ if [ $1 = update ]; then
   echo $(tput setaf 6) "Getting script config...." $(tput sgr0)
   pkgurl=$(spkg catconf $pkgname)
   #spkg remove $pkgname #testing
-  spkg sync $pkgurl $pkgname
+  spkg sync  $(dirname $(spkg catconf $pkgname | grep url)) $pkgname $(dirname $(spkg catconf $pkgname | grep destination))
   #cd ~/.config/spkg/packages
   #pkgurl=$(cat $pkgname)
   #cd $pkgdir
@@ -43,11 +62,18 @@ fi
 if [ $1 = remove ]; then
  pkgname=$2
  echo $(tput setaf 1) "Removing script...." $(tput sgr0)
- cd $pkgdir
- rm $pkgname
- echo $(tput setaf 1) "Removing script config..." $(tput sgr0)
- cd ~/.config/spkg/packages
- rm $pkgname
+ if [ -z $(dirname $(spkg catconf $pkgname | grep destination))
+  cd $pkgdir
+  rm $pkgname
+ else
+  pkgfiledir=$(dirname $(dirname $(spkg catconf $pkgname | grep destination)))
+  pkgfile=$(basename $(dirname $(spkg catconf $pkgname | grep destination)))
+  cd $pkgfiledir
+  rm $pkgfile
+ fi
+  echo $(tput setaf 1) "Removing script config..." $(tput sgr0)
+  cd ~/.config/spkg/packages
+  rm $pkgname
 fi
 if [ $1 = list ]; then
  ls ~/.config/spkg/packages
