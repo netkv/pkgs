@@ -69,3 +69,7 @@ and at end of that file put:
 then add it using __spkg repo add url__
 
 *and if you want then you can pull request or inform me in any other way to add it into https://github.com/Pan00Pernicek/scriptpkg/blob/master/repo-index*
+
+# etc
+
+todo: better managing of non executable files
