@@ -19,90 +19,78 @@ if [ $1 = sync ]; then
   echo $pkgurl > $pkgname
   echo $(tput setaf 2) "Done!" $(tput sgr0)
  fi
-else
- if [ $1 = update ]; then
-  pkgname=$2
-  cd $pkgdir
-  if [ -f ~/.config/spkg/packages/$pkgname ]; then
-   #cho $(tput setaf 1) "Removing old script..." $(tput sgr0)
-   #rm $pkgname
-   echo $(tput setaf 6) "Getting script config...." $(tput sgr0)
-   pkgurl=$(spkg catconf $pkgname)
-   spkg remove $pkgname
-   spkg sync $pkgurl $pkgname
-   #cd ~/.config/spkg/packages
-   #pkgurl=$(cat $pkgname)
-   #cd $pkgdir
-   #wget -O $pkgname $pkgurl
-   #echo $(tput setaf 5) "Making script executable....." $(tput sgr0)
-   #chmod +x $pkgname
-  else
-   echo Sorry, but package does not exist.
-  fi
+fi
+if [ $1 = update ]; then
+ pkgname=$2
+ cd $pkgdir
+ if [ -f ~/.config/spkg/packages/$pkgname ]; then
+  #cho $(tput setaf 1) "Removing old script..." $(tput sgr0)
+  #rm $pkgname
+  echo $(tput setaf 6) "Getting script config...." $(tput sgr0)
+  pkgurl=$(spkg catconf $pkgname)
+  spkg remove $pkgname
+  spkg sync $pkgurl $pkgname
+  #cd ~/.config/spkg/packages
+  #pkgurl=$(cat $pkgname)
+  #cd $pkgdir
+  #wget -O $pkgname $pkgurl
+  #echo $(tput setaf 5) "Making script executable....." $(tput sgr0)
+  #chmod +x $pkgname
  else
-  if [ $1 = remove ]; then
-   pkgname=$2
-   echo $(tput setaf 1) "Removing script...." $(tput sgr0)
-   cd $pkgdir
-   rm $pkgname
-   echo $(tput setaf 1) "Removing script config..." $(tput sgr0)
-   cd ~/.config/spkg/packages
-   rm $pkgname
-  else
-   if [ $1 = list ]; then
-    ls ~/.config/spkg/packages
-   else
-    if [ $1 = install ]; then
-     pkgname=$2
-     cd ~/.config/spkg/
-     echo select repo "("options: $(ls repos)")"
-     read pkginrepo
-     wget -O repo $(cat repos/$pkginrepo)
-     echo $(tput setaf 6) "Executing repo index..." $(tput sgr0)
-     chmod +x repo
-     bash repo $pkgname
-     echo $(tput setaf 1) "Removing repo index.." $(tput sgr0)
-     rm repo
-    else
-     if [ $1 = repo ]; then
-      if [ $2 = add ]; then
-       pkgrepo=$3
-       cd ~/.config/spkg/repos
-       echo What is the name that you want to call that repo"("suggested: $(basename $pkgrepo)")"?
-       read pkgreponame
-       touch $pkgreponame
-       echo $pkgrepo > $pkgreponame
-       echo $(tput setaf 2) "Added repo $pkgreponame with address $pkgrepo!" $(tput sgr0)
-      else
-       if [ $2 = remove ]; then
-        pkgrmrepo=$3
-        cd ~/.config/spkg/repos
-        rm $pkgrmrepo
-       else
-        if [ $2 = getlist ]; then
-         echo Current core repos:
-         curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repo-index
-         echo add one by: spkg repo add repo-url
-        else
-         echo "$2 is not currently supported."
-         curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
-        fi
-       fi
-      fi
-     else
-      if [ $1 = catconf ]; then
-       if [ $2 = destination ]; then
-        cat ~/.config/spkg/destination
-       else
-        cat ~/.config/spkg/packages/$2
-       fi
-      else
-       echo "$1 is not currently supported"
-       curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
-      fi
-     fi
-    fi
-   fi
-  fi
+  echo Sorry, but package does not exist.
  fi
 fi
+if [ $1 = remove ]; then
+ pkgname=$2
+ echo $(tput setaf 1) "Removing script...." $(tput sgr0)
+ cd $pkgdir
+ rm $pkgname
+ echo $(tput setaf 1) "Removing script config..." $(tput sgr0)
+ cd ~/.config/spkg/packages
+ rm $pkgname
+fi
+if [ $1 = list ]; then
+ ls ~/.config/spkg/packages
+fi
+if [ $1 = install ]; then
+ pkgname=$2
+ cd ~/.config/spkg/
+ echo select repo "("options: $(ls repos)")"
+ read pkginrepo
+ wget -O repo $(cat repos/$pkginrepo)
+ echo $(tput setaf 6) "Executing repo index..." $(tput sgr0)
+ chmod +x repo
+ bash repo $pkgname
+ echo $(tput setaf 1) "Removing repo index.." $(tput sgr0)
+ rm repo
+fi
+if [ $1 = repo ]; then
+ if [ $2 = add ]; then
+  pkgrepo=$3
+  cd ~/.config/spkg/repos
+  echo What is the name that you want to call that repo"("suggested: $(basename $pkgrepo)")"?
+  read pkgreponame
+  touch $pkgreponame
+  echo $pkgrepo > $pkgreponame
+  echo $(tput setaf 2) "Added repo $pkgreponame with address $pkgrepo!" $(tput sgr0)
+ fi
+ if [ $2 = remove ]; then
+  pkgrmrepo=$3
+  cd ~/.config/spkg/repos
+  rm $pkgrmrepo
+ fi
+ if [ $2 = getlist ]; then
+  echo Current core repos:
+  curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repo-index
+  echo add one by: spkg repo add repo-url
+ fi
+fi
+if [ $1 = catconf ]; then
+ if [ $2 = destination ]; then
+  cat ~/.config/spkg/destination
+ else
+  cat ~/.config/spkg/packages/$2
+ fi
+fi
+#echo "$1 is not currently supported"
+#curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
