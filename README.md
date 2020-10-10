@@ -1,8 +1,8 @@
 # scriptpkg
 
-**!!!If you installed spkg before 10/10 2020 reinstall it, due to config changes it wont work anymore, (remove spkg folder in .config and spkg file in directory where you installed spkg!!!**
+**!!!If you installed spkg before 10/10 2020 reinstall it, due to config changes it wont work anymore, (remove spkg folder in .config and spkg file in directory where you installed spkg and install again!!!**
 
-A script package manager to update remove and install shell scripts (and appimages) and make installing and updating them easier.
+A script package manager to update remove and install shell scripts (and appimages, and dotfiles and any file now) and make installing and updating them easier.
 
 **Where does it works?**
 
@@ -20,7 +20,7 @@ or:
 
 download "spkg" file and put it into folder that you want and make it executable using gui or chmod +x
 
-create file  ~/.config/spkg/destination and write to it destination folder that you want to have scripts saved in (dont forget if you want to install them into root writable only directory you need use sudo and then config dir is /root/.config/spkg
+create file  ~/.config/spkg/destination and write to it destination folder that you want to have scripts saved in (dont forget if you want to install them into root writable only directory you need use sudo and then config dir is /root/.config/spkg)
 
 create folder  ~/.config/spkg/packages
 
@@ -32,7 +32,7 @@ needs: wget, sh, cat, bash (only for "install" command), curl (only for usage an
 
 **update spkg itself**
 
-create file ~/.config/spkg/packages/spkg with content: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg if that file doesnt exist already
+create file ~/.config/spkg/packages/spkg with content: https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg/url if that file doesnt exist already
 (!!!JUST URL LINK, NO END WEBPAGE!!!)
 
 then just: __spkg update spkg__
