@@ -25,7 +25,7 @@ if [ $1 = sync ]; then
   dest=$4
   cd $(dirname $dest)
   wget -O $(basename $dest) $pkgurl
-  make file executable y/n ?
+  echo make file executable y/n ?
   read execque
   if [ $execque = y ]; then
    echo $(tput setaf 5) "Making script executable...." $(tput sgr0)
