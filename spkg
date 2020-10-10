@@ -19,9 +19,9 @@ if [ $1 = sync ]; then
   echo $pkgurl"/url" > $pkgname
   echo $(tput setaf 2) "Done!" $(tput sgr0)
  fi
- if [ !-z "$4" ]; then
-  pkgurl=$2
-  pkgname=$3
+ if [ $2 = file ]; then
+  pkgurl=$3
+  pkgname=$(basename $dest)
   dest=$4
   cd $(dirname $dest)
   wget -O $(basename $dest) $pkgurl
