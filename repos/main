@@ -14,4 +14,5 @@ encrypt=https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scri
 dirsize=https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/directorysize.sh
 fff=https://raw.githubusercontent.com/dylanaraps/fff/master/fff
 pipes=https://raw.githubusercontent.com/pipeseroni/pipes.sh/master/pipes.sh
+fportm=https://raw.githubusercontent.com/Pan00Pernicek/fportm/main/fportm
 spkg sync ${!1}
