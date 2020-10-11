@@ -22,3 +22,4 @@ get list of core repos that exist: spkg repo getlist
 get configuration of item or destination: spkg catconf item
 -------------------------------------------------------------
 more info: https://github.com/Pan00Pernicek/scriptpkg
+-------------------------------------------------------------
