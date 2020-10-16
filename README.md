@@ -73,3 +73,5 @@ then add it using __spkg repo add url__
 # etc
 
 todo: better managing of non executable files
+
+upgrading (changing url in repo)
