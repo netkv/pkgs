@@ -7,6 +7,10 @@ read sdir
 cd $spkgpatch
 wget https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg
 chmod +x spkg
+if [ !-d ~/.config/ ]; then
+ echo Warn: config directory does not exist, creating new one...
+ mkdir ~/.config/
+fi
 cd ~/.config/
 mkdir spkg
 cd spkg
