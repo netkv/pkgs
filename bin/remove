@@ -1,5 +1,3 @@
-#/bin/sh
-#remove function
 pkgname=$2
 echo $(tput setaf 1) "Removing script...." $(tput sgr0)
 if [ -z $(dirname $(spkg catconf $pkgname | grep destination)) ]; then
