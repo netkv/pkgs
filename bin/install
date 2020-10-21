@@ -1,0 +1,10 @@
+pkgname=$2
+cd ~/.config/spkg/
+echo select repo "("options: $(ls repos)")"
+read pkginrepo
+wget -O repo $(cat repos/$pkginrepo)
+echo $(tput setaf 6) "Executing repo index..." $(tput sgr0)
+chmod +x repo
+bash repo $pkgname
+echo $(tput setaf 1) "Removing repo index.." $(tput sgr0)
+rm repo
