@@ -1,0 +1,19 @@
+if [ $2 = add ]; then
+ pkgrepo=$3
+ cd ~/.config/spkg/repos
+ echo What is the name that you want to call that repo"("suggested: $(basename $pkgrepo)")"?
+ read pkgreponame
+ touch $pkgreponame
+ echo $pkgrepo > $pkgreponame
+ echo $(tput setaf 2) "Added repo $pkgreponame with address $pkgrepo!" $(tput sgr0)
+fi
+if [ $2 = remove ]; then
+ pkgrmrepo=$3
+ cd ~/.config/spkg/repos
+ rm $pkgrmrepo
+fi
+if [ $2 = getlist ]; then
+ echo Current core repos:
+ curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repo-index
+ echo add one by: spkg repo add repo-url
+fi
