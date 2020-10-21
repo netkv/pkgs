@@ -1,1 +1,0 @@
- dirname $(find /usr/ports | grep $1) | sort -u
