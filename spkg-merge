@@ -1,0 +1,25 @@
+#!/bin/env bash
+touch spkg
+chmod +x spkg
+echo "#""!"/bin/sh >> spkg
+echo actf="$"1 >> spkg
+echo shift >> spkg
+git clone https://github.com/Pan00Pernicek/scriptpkg/new/master spkgmerging
+cd spkgmerging
+cd bin
+items=$(ls)
+cd ..
+cd ..
+for i in $items
+do
+ echo if "[" "$"actf = $i "]"";"" then" >> bashbox
+ #start of text edit
+ filern=spkgmerging/bin/$i
+ lines=$(cat $filern | wc -l)
+ for u in `seq $lines`
+ do
+  rn=" "$( head -n $u $filern | tail -1)
+  cat <<< "$rn" >> "spkg"
+ done
+ echo fi >> spkg
+done
