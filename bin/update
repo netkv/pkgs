@@ -1,0 +1,11 @@
+#/bin/sh
+#update function
+pkgname=$2
+cd $pkgdir
+if [ -f ~/.config/spkg/packages/$pkgname ]; then
+ echo $(tput setaf 6) "Getting script config...." $(tput sgr0)
+ pkgurl=$(spkg catconf $pkgname)
+ spkg sync  $(dirname $(spkg catconf $pkgname | grep url)) $pkgname $(dirname $(spkg catconf $pkgname | grep destination))
+else
+ echo Sorry, but package does not exist.
+fi
