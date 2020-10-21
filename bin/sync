@@ -1,5 +1,5 @@
-
 #/bin/sh
+#spkg module for syncing
 if [ $2 = file ]; then
  pkgurl=$3
  dest=$4
