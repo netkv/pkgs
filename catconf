@@ -1,0 +1,5 @@
+if [ $2 = destination ]; then
+ cat ~/.config/spkg/destination
+else
+ cat ~/.config/spkg/packages/$2
+fi
