@@ -15,4 +15,10 @@ dirsize=https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scri
 fff=https://raw.githubusercontent.com/dylanaraps/fff/master/fff
 pipes=https://raw.githubusercontent.com/pipeseroni/pipes.sh/master/pipes.sh
 fportm=https://raw.githubusercontent.com/Pan00Pernicek/fportm/main/fportm
+bashbox=https://raw.githubusercontent.com/Pan00Pernicek/bashbox/master/bashbox
+pfetch=https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
+nerdfetch=https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch
+mfetch=https://raw.githubusercontent.com/numpadd/mfetch/master/mfetch
+bed=https://raw.githubusercontent.com/comfies/bed/master/bed
+bim=https://raw.githubusercontent.com/lijaesela/bim/master/bim
 spkg sync ${!1}
