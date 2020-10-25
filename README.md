@@ -6,7 +6,7 @@ A script package manager to update remove and install shell scripts (and appimag
 
 **Where does it works?**
 
-Tested on Linux, Android Termux and FreeBSD. It may work on WSL.
+Tested on Linux, Android Termux, Solaris and FreeBSD. It also works on WSL.
 
 **Instalation**
 
