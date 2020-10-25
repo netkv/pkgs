@@ -72,6 +72,6 @@ then add it using __spkg repo add url__
 
 # etc
 
-todo: better managing of non executable files
+todo: better managing of non executable files, better installer
 
 upgrading (changing url in repo)
