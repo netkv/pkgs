@@ -5,7 +5,7 @@ read spkgpatch
 echo Please select directory to install scripts.
 read sdir
 cd $spkgpatch
-wget https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg
+curl https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg -o spkg
 chmod +x spkg
 if [ !-d ~/.config/ ]; then
  echo Warn: config directory does not exist, creating new one...
