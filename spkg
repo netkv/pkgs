@@ -6,7 +6,8 @@ if [ $1 = sync ]; then
   dest=$4
   pkgname=$(basename $dest)
   cd $(dirname $dest)
-  wget -O $(basename $dest) $pkgurl
+  #wget -O $(basename $dest) $pkgurl
+  curl $pkgurl -o $(basename $dest)
   echo make file executable y/n ?
   read execque
   if [ $execque = y ]; then
@@ -29,7 +30,7 @@ if [ $1 = sync ]; then
    pkgurl=$2
    pkgname=$3
    cd $pkgdir
-   wget -O $pkgname $pkgurl
+   curl $pkgurl -o $pkgname
    echo $(tput setaf 5) "Making script executable...." $(tput sgr0)
    chmod +x $pkgname
    echo $(tput setaf 6) "Adding config file....." $(tput sgr0)
@@ -84,7 +85,7 @@ if [ $1 = install ]; then
  cd ~/.config/spkg/
  echo select repo "("options: $(ls repos)")"
  read pkginrepo
- wget -O repo $(cat repos/$pkginrepo)
+ curl $(cat repos/$pkginrepo) -o spkg-repo
  echo $(tput setaf 6) "Executing repo index..." $(tput sgr0)
  chmod +x repo
  bash repo $pkgname
