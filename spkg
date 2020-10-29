@@ -85,7 +85,7 @@ if [ $1 = install ]; then
  cd ~/.config/spkg/
  echo select repo "("options: $(ls repos)")"
  read pkginrepo
- curl $(cat repos/$pkginrepo) -o spkg-repo
+ curl $(cat repos/$pkginrepo) -o repo
  echo $(tput setaf 6) "Executing repo index..." $(tput sgr0)
  chmod +x repo
  bash repo $pkgname
