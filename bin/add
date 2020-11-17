@@ -1,5 +1,0 @@
-syncfile=$2
-wget -O syncfile $syncfile
-chmod +x syncfile
-./syncfile
-rm syncfile
