@@ -1,52 +1,54 @@
-spkg spkg-s spkg https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg
-spkg spkg-s fetsh https://raw.githubusercontent.com/6gk/fet.sh/master/fet.sh
-spkg spkg-s neofetch https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
-spkg spkg-s nanofetch https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch
-spkg spkg-s nanofetch-pwsh https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch-pwsh
-spkg spkg-s sbashfm https://raw.githubusercontent.com/Pan00Pernicek/sbashfm/master/sbashfm
-spkg spkg-s bashtop https://raw.githubusercontent.com/aristocratos/bashtop/master/bashtop
-spkg spkg-s meme https://raw.githubusercontent.com/alexanderepstein/Bash-Snippets/master/meme/meme
-spkg spkg-s currency https://raw.githubusercontent.com/alexanderepstein/Bash-Snippets/master/currency/currency
-spkg spkg-s bashcheck https://raw.githubusercontent.com/hannob/bashcheck/master/bashcheck
-spkg spkg-s helloworld https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/hello-world.sh
-spkg spkg-s spattern https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/special-pattern.sh
-spkg spkg-s encrypt https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/encrypt.sh
-spkg spkg-s dirsize https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/directorysize.sh
-spkg spkg-s fff https://raw.githubusercontent.com/dylanaraps/fff/master/fff
-spkg spkg-s pipes https://raw.githubusercontent.com/pipeseroni/pipes.sh/master/pipes.sh
-spkg spkg-s fportm https://raw.githubusercontent.com/Pan00Pernicek/fportm/main/fportm
-spkg spkg-s bashbox https://raw.githubusercontent.com/Pan00Pernicek/bashbox/master/bashbox
-spkg spkg-s pfetch https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
-spkg spkg-s nerdfetch https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch
-spkg spkg-s mfetch https://raw.githubusercontent.com/numpadd/mfetch/master/mfetch
-spkg spkg-s bed https://raw.githubusercontent.com/comfies/bed/master/bed
-spkg spkg-s bim https://raw.githubusercontent.com/lijaesela/bim/master/bim
+spkg spkg-s spkg https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg &
+spkg spkg-s fetsh https://raw.githubusercontent.com/6gk/fet.sh/master/fet.sh &
+spkg spkg-s neofetch https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch &
+spkg spkg-s nanofetch https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch &
+spkg spkg-s nanofetch-pwsh https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch-pwsh &
+spkg spkg-s sbashfm https://raw.githubusercontent.com/Pan00Pernicek/sbashfm/master/sbashfm &
+spkg spkg-s bashtop https://raw.githubusercontent.com/aristocratos/bashtop/master/bashtop &
+spkg spkg-s meme https://raw.githubusercontent.com/alexanderepstein/Bash-Snippets/master/meme/meme &
+spkg spkg-s currency https://raw.githubusercontent.com/alexanderepstein/Bash-Snippets/master/currency/currency & 
+spkg spkg-s bashcheck https://raw.githubusercontent.com/hannob/bashcheck/master/bashcheck &
+spkg spkg-s helloworld https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/hello-world.sh &
+spkg spkg-s spattern https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/special-pattern.sh &
+spkg spkg-s encrypt https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/encrypt.sh &
+spkg spkg-s dirsize https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/directorysize.sh &
+spkg spkg-s fff https://raw.githubusercontent.com/dylanaraps/fff/master/fff &
+spkg spkg-s pipes https://raw.githubusercontent.com/pipeseroni/pipes.sh/master/pipes.sh &
+spkg spkg-s fportm https://raw.githubusercontent.com/Pan00Pernicek/fportm/main/fportm &
+spkg spkg-s bashbox https://raw.githubusercontent.com/Pan00Pernicek/bashbox/master/bashbox &
+spkg spkg-s pfetch https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch &
+spkg spkg-s nerdfetch https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch &
+spkg spkg-s mfetch https://raw.githubusercontent.com/numpadd/mfetch/master/mfetch &
+spkg spkg-s bed https://raw.githubusercontent.com/comfies/bed/master/bed &
+spkg spkg-s bim https://raw.githubusercontent.com/lijaesela/bim/master/bim &
 if [ $1 = axe ]; then
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-a axe-a
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-b axe-b
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-c axe-c
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-d axe-d
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-e axe-e
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-f axe-f
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-g axe-g
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-i axe-i
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-j axe-j
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-l axe-l
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-m axe-m
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-o axe-o
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-p axe-p 
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-r axe-r
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-s axe-s
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-u axe-u
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-w axe-w
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-x axe-x
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-a axe-a &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-b axe-b &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-c axe-c &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-d axe-d &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-e axe-e &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-f axe-f &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-g axe-g &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-i axe-i &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-j axe-j &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-l axe-l &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-m axe-m &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-o axe-o &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-p axe-p &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-r axe-r &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-s axe-s &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-u axe-u &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-w axe-w &
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-x axe-x &
+ wait
  echo enter your home dir
  read dir
  mkdir $dir/axe/
- mkdir $dir/axe/sv
- mkdir $dir/axe/xv
- mkdir $dir/axe/ex
- mkdir $dir/axe/env
+ mkdir $dir/axe/sv &
+ mkdir $dir/axe/xv &
+ mkdir $dir/axe/ex &
+ mkdir $dir/axe/env &
+ wait
  exit
 fi
 if [ $1 = axefetch ]; then
