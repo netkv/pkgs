@@ -118,3 +118,14 @@ if [ $1 = add ]; then
  ./syncfile
  rm syncfile
 fi
+if [ $1 = spkg-s ]; then
+ mkdir /tmp/spkgrepo
+ cd /tmp/spkgrepo
+ touch $2
+ echo $3 > 2
+fi
+if [ $1 = spkg-g ]; then
+ cd /tmp/spkgrepo
+ cat $2
+fi
+ 
