@@ -46,5 +46,6 @@ fi
 if [ $1 = axefetch ]; then
  sh repo axe
  spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/example/axefetch
+ exit
 fi
 spkg sync $(spkg spkg-g $1)
