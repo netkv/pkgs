@@ -22,25 +22,24 @@ spkg spkg-s mfetch https://raw.githubusercontent.com/numpadd/mfetch/master/mfetc
 spkg spkg-s bed https://raw.githubusercontent.com/comfies/bed/master/bed
 spkg spkg-s bim https://raw.githubusercontent.com/lijaesela/bim/master/bim
 if [ $1 = axe ]; then
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-a axe-a &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-b axe-b &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-c axe-c &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-d axe-d &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-e axe-e &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-f axe-f &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-g axe-g &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-i axe-i &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-j axe-j &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-l axe-l &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-m axe-m &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-o axe-o &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-p axe-p & 
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-r axe-r &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-s axe-s &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-u axe-u &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-w axe-w &
- spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-x axe-x &
- wait
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-a axe-a
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-b axe-b
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-c axe-c
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-d axe-d
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-e axe-e
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-f axe-f
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-g axe-g
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-i axe-i
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-j axe-j
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-l axe-l
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-m axe-m
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-o axe-o
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-p axe-p 
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-r axe-r
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-s axe-s
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-u axe-u
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-w axe-w
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-x axe-x
  exit
 fi
 if [ $1 = axefetch ]; then
