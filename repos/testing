@@ -40,7 +40,7 @@ if [ $1 = axe ]; then
  spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-u axe-u
  spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-w axe-w
  spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-x axe-x
- enter your home dir
+ echo enter your home dir
  read dir
  mkdir $dir/axe/
  mkdir $dir/axe/sv
