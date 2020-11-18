@@ -43,4 +43,8 @@ if [ $1 = axe ]; then
  wait
  exit
 fi
- spkg sync $(spkg spkg-g $1)
+if [ $1 = axefetch ]; then
+ sh repo axe
+ spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/example/axefetch
+fi
+spkg sync $(spkg spkg-g $1)
