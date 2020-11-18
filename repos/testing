@@ -40,6 +40,12 @@ if [ $1 = axe ]; then
  spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-u axe-u
  spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-w axe-w
  spkg sync https://raw.githubusercontent.com/Pan00Pernicek/axe/main/backend/sh/axe-x axe-x
+ user=$(logname)
+ sudo -u $user mkdir ~/axe
+ sudo -u $user mkdir ~/axe/sv
+ sudo -u $user mkdir ~/axe/xv
+ sudo -u $user mkdir ~/axe/ex
+ sudo -u $user mkdit ~/axe/env
  exit
 fi
 if [ $1 = axefetch ]; then
