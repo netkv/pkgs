@@ -45,18 +45,9 @@ if [ $1 = update ]; then
  pkgname=$2
  cd $pkgdir
  if [ -f ~/.config/spkg/packages/$pkgname ]; then
-  #cho $(tput setaf 1) "Removing old script..." $(tput sgr0)
-  #rm $pkgname
   echo $(tput setaf 6) "Getting script config...." $(tput sgr0)
   pkgurl=$(spkg catconf $pkgname)
-  #spkg remove $pkgname #testing
   spkg sync  $(dirname $(spkg catconf $pkgname | grep url)) $pkgname $(dirname $(spkg catconf $pkgname | grep destination))
-  #cd ~/.config/spkg/packages
-  #pkgurl=$(cat $pkgname)
-  #cd $pkgdir
-  #wget -O $pkgname $pkgurl
-  #echo $(tput setaf 5) "Making script executable....." $(tput sgr0)
-  #chmod +x $pkgname
  else
   echo Sorry, but package does not exist.
  fi
@@ -107,7 +98,7 @@ if [ $1 = repo ]; then
   cd ~/.config/spkg/repos
   rm $pkgrmrepo
  fi
- if [ $2 = getlist ]; then
+ if [ $2 = getcore ]; then
   echo Current core repos:
   curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repo-index
   echo add one by: spkg repo add repo-url
@@ -127,5 +118,3 @@ if [ $1 = add ]; then
  ./syncfile
  rm syncfile
 fi
-#echo "$1 is not currently supported"
-#curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
