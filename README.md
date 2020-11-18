@@ -1,5 +1,7 @@
 # scriptpkg
 
+**new repos without need of bash and basic support of deps and meta packages coming soon, test tesing repo and see**
+
 **spkg now uses curl instead of wget, might add support for both later**
 
 **!!!If you installed spkg before 10/10 2020 reinstall it, due to config changes it wont work anymore, (remove spkg folder in .config and spkg file in directory where you installed spkg and install again!!!**
@@ -56,7 +58,7 @@ other repos: https://github.com/Pan00Pernicek/scriptpkg/blob/master/repo-index
 
 *to manage apps and scripts easier*
 
-**creating repo:**
+**creating repo:** (legacy)
 
 you can use anything online that stores **raw text only** **(recommended github)**
 
@@ -77,3 +79,5 @@ then add it using __spkg repo add url__
 todo: better managing of non executable files, better installer
 
 upgrading (changing url in repo)
+
+~~make my own distro~~
