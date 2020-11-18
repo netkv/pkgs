@@ -2,7 +2,7 @@ spkg spkg-s spkg https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/maste
 spkg spkg-s fetsh https://raw.githubusercontent.com/6gk/fet.sh/master/fet.sh
 spkg spkg-s neofetch https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
 spkg spkg-s nanofetch https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch
-spkg spkg-s nanofetchpwsh https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch-pwsh
+spkg spkg-s nanofetch-pwsh https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch-pwsh
 spkg spkg-s sbashfm https://raw.githubusercontent.com/Pan00Pernicek/sbashfm/master/sbashfm
 spkg spkg-s bashtop https://raw.githubusercontent.com/aristocratos/bashtop/master/bashtop
 spkg spkg-s meme https://raw.githubusercontent.com/alexanderepstein/Bash-Snippets/master/meme/meme
