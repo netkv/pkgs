@@ -17,7 +17,7 @@ add repo: spkg repo add repo-url
 -------------------------------------------------------------
 remove repo: spkg repo remove repo-name
 -------------------------------------------------------------
-get list of core repos that exist: spkg repo getlist
+get list of core repos that exist: spkg repo getcore
 -------------------------------------------------------------
 get configuration of item or destination: spkg catconf item
 -------------------------------------------------------------
