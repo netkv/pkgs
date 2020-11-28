@@ -58,7 +58,7 @@ other repos: https://github.com/Pan00Pernicek/scriptpkg/blob/master/repo-index
 
 *to manage apps and scripts easier*
 
-**creating repo:** (legacy)
+**creating repo:** (normal, check testing repo for example of advanced repo methods)
 
 you can use anything online that stores **raw text only** **(recommended github)**
 
