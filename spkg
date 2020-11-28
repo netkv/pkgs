@@ -40,8 +40,7 @@ if [ $1 = sync ]; then
    echo $(tput setaf 2) "Done!" $(tput sgr0)
   fi
  fi
-fi
-if [ $1 = update ]; then
+elif [ $1 = update ]; then
  pkgname=$2
  cd $pkgdir
  if [ -f ~/.config/spkg/packages/$pkgname ]; then
@@ -51,8 +50,7 @@ if [ $1 = update ]; then
  else
   echo Sorry, but package does not exist.
  fi
-fi
-if [ $1 = remove ]; then
+elif [ $1 = remove ]; then
  pkgname=$2
  echo $(tput setaf 1) "Removing script...." $(tput sgr0)
  if [ -z $(dirname $(spkg catconf $pkgname | grep destination)) ]; then
@@ -67,11 +65,9 @@ if [ $1 = remove ]; then
   echo $(tput setaf 1) "Removing script config..." $(tput sgr0)
   cd ~/.config/spkg/packages
   rm $pkgname
-fi
-if [ $1 = list ]; then
+elif [ $1 = list ]; then
  ls ~/.config/spkg/packages
-fi
-if [ $1 = install ]; then
+elif [ $1 = install ]; then
  pkgname=$2
  cd ~/.config/spkg/
  echo select repo "("options: $(ls repos)")"
@@ -82,8 +78,7 @@ if [ $1 = install ]; then
  bash repo $pkgname
  echo $(tput setaf 1) "Removing repo index.." $(tput sgr0)
  rm repo
-fi
-if [ $1 = repo ]; then
+elif [ $1 = repo ]; then
  if [ $2 = add ]; then
   pkgrepo=$3
   cd ~/.config/spkg/repos
@@ -103,29 +98,26 @@ if [ $1 = repo ]; then
   curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repo-index
   echo add one by: spkg repo add repo-url
  fi
-fi
-if [ $1 = catconf ]; then
+elif [ $1 = catconf ]; then
  if [ $2 = destination ]; then
   cat ~/.config/spkg/destination
  else
   cat ~/.config/spkg/packages/$2
  fi
-fi
-if [ $1 = add ]; then
+elif [ $1 = add ]; then
  syncfile=$2
  wget -O syncfile $syncfile
  chmod +x syncfile
  ./syncfile
  rm syncfile
-fi
-if [ $1 = spkg-s ]; then
+elif [ $1 = spkg-s ]; then
  mkdir /tmp/spkgrepo
  cd /tmp/spkgrepo
  touch $2
  echo $3 > $2
-fi
-if [ $1 = spkg-g ]; then
+elif [ $1 = spkg-g ]; then
  cd /tmp/spkgrepo
  cat $2
+else
+ curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage.md
 fi
- 
