@@ -1,6 +1,0 @@
-#freebsd port tree
-echo choose category
-read place
-cd "/usr/ports/"$place"/"$1
-echo $(tput setab 6) installing $(basename $(pwd)) with full patch of $(pwd)$(tput sgr0)
-make install clean
