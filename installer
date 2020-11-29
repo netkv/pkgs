@@ -25,7 +25,13 @@ echo https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg/url >
 echo $spkgpatch"/destination" >> spkg
 cd ..
 mkdir repos
-cd repos
-touch main
-echo https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repos/main > main
-echo everything done
+echo Do you want to add main repo? "(y or n)"
+read sky
+if [ $sky = y ]; then
+ cd repos
+ touch main
+ echo https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repos/main > main
+ echo everything done
+else
+ exit
+fi
