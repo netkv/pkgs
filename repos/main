@@ -21,4 +21,4 @@ nerdfetch=https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/n
 mfetch=https://raw.githubusercontent.com/numpadd/mfetch/master/mfetch
 bed=https://raw.githubusercontent.com/comfies/bed/master/bed
 bim=https://raw.githubusercontent.com/lijaesela/bim/master/bim
-spkg sync ${!1}
+spkg sync ${!1} $2
