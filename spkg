@@ -79,7 +79,7 @@ elif [ $1 = install ]; then
  curl $(cat repos/$pkginrepo) -o repo
  echo $(tput setaf 6) "Executing repo index..." $(tput sgr0)
  chmod +x repo
- bash repo $pkgname
+ bash repo $pkgname $4
  echo $(tput setaf 1) "Removing repo index.." $(tput sgr0)
  rm repo
 elif [ $1 = repo ]; then
