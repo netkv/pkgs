@@ -7,7 +7,9 @@ read sdir
 cd $spkgpatch
 curl https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg -o spkg
 chmod +x spkg
-if [ !-d ~/.config/ ]; then
+if [ -d ~/.config/ ]; then
+ echo config dir exist, using it...
+else
  echo Warn: config directory does not exist, creating new one...
  mkdir ~/.config/
 fi
