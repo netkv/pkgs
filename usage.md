@@ -1,9 +1,9 @@
 
 Usage:
 -------------------------------------------------------------
-install: spkg install item-name (you will be asked for repo that you want install from)
+install: spkg install item-name (repo) (wanted-name) (you will be asked for repo that you want install from) (will ask for repo if not provided and name if not provided) 
 -------------------------------------------------------------
-sync script from url: spkg sync item-url wanted-item-name (you will be asked for name that you want save script as if you wont enter name )
+sync script from url: spkg sync item-url (wanted-name) (you will be asked for name that you want save script as if you wont enter name )
 -------------------------------------------------------------
 sync file to defined directory instead of default one: spkg sync file file-url file-destination+file-name (example /bin/text.txt)
 -------------------------------------------------------------
