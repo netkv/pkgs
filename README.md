@@ -70,6 +70,12 @@ and at end of that file put:
 
 ```spkg sync ${!1}```
 
+or
+
+```spkg sync ${!1} $2```
+
+if you want allow non-interactive use of your repo
+
 then add it using __spkg repo add url__
 
 *and if you want then you can pull request or inform me in any other way to add it into https://github.com/Pan00Pernicek/scriptpkg/blob/master/repo-index*
