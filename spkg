@@ -108,12 +108,6 @@ elif [ $1 = catconf ]; then
  else
   cat ~/.config/spkg/packages/$2
  fi
-elif [ $1 = add ]; then
- syncfile=$2
- wget -O syncfile $syncfile
- chmod +x syncfile
- ./syncfile
- rm syncfile
 elif [ $1 = spkg-s ]; then
  mkdir /tmp/spkgrepo
  cd /tmp/spkgrepo
@@ -122,6 +116,17 @@ elif [ $1 = spkg-s ]; then
 elif [ $1 = spkg-g ]; then
  cd /tmp/spkgrepo
  cat $2
+elif [ $1 = search ]; then
+ pkgname=$2
+ cd ~/.config/spkg/
+ if [ -z $3 ]; then 
+  echo select repo "("options: $(ls repos)")"
+  read pkginrepo
+ else
+  pkginrepo=$3
+ fi
+ curl $(cat repos/$pkginrepo) -o repo
+ cat repo | grep $pkgname
 else
  curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage.md
 fi
