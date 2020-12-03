@@ -128,5 +128,5 @@ elif [ $1 = search ]; then
  curl $(cat repos/$pkginrepo) -o repo
  cat repo | grep $pkgname
 else
- curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage.md
+ curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
 fi
