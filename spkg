@@ -31,9 +31,9 @@ if [ $1 = sync ]; then
    pkgname=$3
    cd $pkgdir
    curl $pkgurl -o $pkgname
-   echo $(tput setaf 5) "Making script executable...." $(tput sgr0)
+   echo $(tput setaf 5) "Making script executable:" $(tput sgr0)"chmod +x $pkgname"
    chmod +x $pkgname
-   echo $(tput setaf 6) "Adding config file....." $(tput sgr0)
+   echo $(tput setaf 6) "Adding config file:" $(tput sgr0)"at config pkg dir:touch $pkgname:add url to it"
    cd ~/.config/spkg/packages
    touch $pkgname
    echo $pkgurl"/url" > $pkgname
@@ -44,7 +44,7 @@ elif [ $1 = update ]; then
  pkgname=$2
  cd $pkgdir
  if [ -f ~/.config/spkg/packages/$pkgname ]; then
-  echo $(tput setaf 6) "Getting script config...." $(tput sgr0)
+  echo $(tput setaf 6) "Getting script config:" $(tput sgr0)"spkg catconf $pkgname"
   pkgurl=$(spkg catconf $pkgname)
   spkg sync  $(dirname $(spkg catconf $pkgname | grep url)) $pkgname $(dirname $(spkg catconf $pkgname | grep destination))
  else
@@ -52,7 +52,7 @@ elif [ $1 = update ]; then
  fi
 elif [ $1 = remove ]; then
  pkgname=$2
- echo $(tput setaf 1) "Removing script...." $(tput sgr0)
+ echo $(tput setaf 1) "Removing script:" $(tput sgr0)"if not custom dir cd to pkg dir -> rm $pkgname:else cd to $pkgfiledir -> rm $pkgfile"
  if [ -z $(dirname $(spkg catconf $pkgname | grep destination)) ]; then
   cd $pkgdir
   rm $pkgname
@@ -62,7 +62,7 @@ elif [ $1 = remove ]; then
   cd $pkgfiledir
   rm $pkgfile
  fi
-  echo $(tput setaf 1) "Removing script config..." $(tput sgr0)
+  echo $(tput setaf 1) "Removing script config:" $(tput sgr0)"at pkg config dir -> rm $pkgname"
   cd ~/.config/spkg/packages
   rm $pkgname
 elif [ $1 = list ]; then
@@ -77,10 +77,10 @@ elif [ $1 = install ]; then
   pkginrepo=$3
  fi
  curl $(cat repos/$pkginrepo) -o repo
- echo $(tput setaf 6) "Executing repo index..." $(tput sgr0)
+ echo $(tput setaf 6) "Executing repo index:" $(tput sgr0)"+x & bash repo $pkgname $4"
  chmod +x repo
  bash repo $pkgname $4
- echo $(tput setaf 1) "Removing repo index.." $(tput sgr0)
+ echo $(tput setaf 1) "Removing repo index:" $(tput sgr0)"repo -> rm"
  rm repo
 elif [ $1 = repo ]; then
  if [ $2 = add ]; then
@@ -130,5 +130,6 @@ elif [ $1 = search ]; then
  curl $(cat repos/$pkginrepo) -o repo
  cat repo | grep $pkgname
 else
+ echo $(tput setaf 4) https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage $(tput sgr0)
  curl -s https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/usage
 fi
