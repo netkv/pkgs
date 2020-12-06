@@ -11,10 +11,10 @@ if [ $1 = sync ]; then
   echo make file executable y/n ?
   read execque
   if [ $execque = y ]; then
-   echo $(tput setaf 5) "Making script executable...." $(tput sgr0)
+   echo $(tput setaf 5) "Making script executable:"$(tput setaf 8)"chmod +x $pkgname"$(tput sgr0)
    chmod +x $pkgname
   fi
-  echo $(tput setaf 6) "Adding config file....." $(tput sgr0)
+  echo $(tput setaf 6) "Adding config file:"$(tput setaf 8))"at config pkg dir:touch $pkgname:add url & dir to it"$(tput sgr0)
   cd ~/.config/spkg/packages
   touch $pkgname
   echo $pkgurl"/url" > $pkgname
@@ -31,9 +31,9 @@ if [ $1 = sync ]; then
    pkgname=$3
    cd $pkgdir
    curl $pkgurl -o $pkgname
-   echo $(tput setaf 5) "Making script executable:" $(tput sgr0)"chmod +x $pkgname"
+   echo $(tput setaf 5) "Making script executable:"$(tput setaf 8)"chmod +x $pkgname"$(tput sgr0)
    chmod +x $pkgname
-   echo $(tput setaf 6) "Adding config file:" $(tput sgr0)"at config pkg dir:touch $pkgname:add url to it"
+   echo $(tput setaf 6) "Adding config file:"$(tput setaf 8)"at config pkg dir:touch $pkgname:add url to it"$(tput sgr0)
    cd ~/.config/spkg/packages
    touch $pkgname
    echo $pkgurl"/url" > $pkgname
@@ -44,15 +44,15 @@ elif [ $1 = update ]; then
  pkgname=$2
  cd $pkgdir
  if [ -f ~/.config/spkg/packages/$pkgname ]; then
-  echo $(tput setaf 6) "Getting script config:" $(tput sgr0)"spkg catconf $pkgname"
+  echo $(tput setaf 6) "Getting script config:"$(tput setaf 8)"spkg catconf $pkgname"$(tput sgr 0)
   pkgurl=$(spkg catconf $pkgname)
   spkg sync  $(dirname $(spkg catconf $pkgname | grep url)) $pkgname $(dirname $(spkg catconf $pkgname | grep destination))
  else
-  echo Sorry, but package does not exist.
+  echo $(tput setaf 1)Sorry, but package does not exist.$(tput sgr0)
  fi
 elif [ $1 = remove ]; then
  pkgname=$2
- echo $(tput setaf 1) "Removing script:" $(tput sgr0)"if not custom dir cd to pkg dir -> rm $pkgname:else cd to $pkgfiledir -> rm $pkgfile"
+ echo $(tput setaf 1) "Removing script:"$(tput setaf 8)"if not custom dir cd to pkg dir -> rm $pkgname:else cd to $pkgfiledir -> rm $pkgfile"$(tput sgr0)
  if [ -z $(dirname $(spkg catconf $pkgname | grep destination)) ]; then
   cd $pkgdir
   rm $pkgname
@@ -62,7 +62,7 @@ elif [ $1 = remove ]; then
   cd $pkgfiledir
   rm $pkgfile
  fi
-  echo $(tput setaf 1) "Removing script config:" $(tput sgr0)"at pkg config dir -> rm $pkgname"
+  echo $(tput setaf 1) "Removing script config:"$(tput setaf 8)"at pkg config dir -> rm $pkgname"$(tput sgr0)
   cd ~/.config/spkg/packages
   rm $pkgname
 elif [ $1 = list ]; then
@@ -77,10 +77,10 @@ elif [ $1 = install ]; then
   pkginrepo=$3
  fi
  curl $(cat repos/$pkginrepo) -o repo
- echo $(tput setaf 6) "Executing repo index:" $(tput sgr0)"+x & bash repo $pkgname $4"
+ echo $(tput setaf 6) "Executing repo index:"$(tput setaf 8)"+x & bash repo $pkgname $4"$(tput sgr0)
  chmod +x repo
  bash repo $pkgname $4
- echo $(tput setaf 1) "Removing repo index:" $(tput sgr0)"repo -> rm"
+ echo $(tput setaf 1) "Removing repo index:"$(tput setaf 8)"repo -> rm"$(tput sgr0)
  rm repo
 elif [ $1 = repo ]; then
  if [ $2 = add ]; then
