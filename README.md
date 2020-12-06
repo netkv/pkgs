@@ -14,7 +14,7 @@ Tested on Linux, Android Termux, Solaris and FreeBSD. It also works on WSL.
 
 **Instalation**
 
-use installer: __wget https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/installer; sh installer__ ***(recommended)***
+use installer: `wget https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/installer; sh installer` ***(recommended)***
 
 use with sudo to install into root writable only directories ***(recommended)***
 
