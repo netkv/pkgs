@@ -14,7 +14,7 @@ if [ $1 = sync ]; then
    echo $(tput setaf 5) "Making script executable:"$(tput setaf 8)"chmod +x $pkgname"$(tput sgr0)
    chmod +x $pkgname
   fi
-  echo $(tput setaf 6) "Adding config file:"$(tput setaf 8))"at config pkg dir:touch $pkgname:add url & dir to it"$(tput sgr0)
+  echo $(tput setaf 6) "Adding config file:"$(tput setaf 8)"at config pkg dir:touch $pkgname:add url & dir to it"$(tput sgr0)
   cd ~/.config/spkg/packages
   touch $pkgname
   echo $pkgurl"/url" > $pkgname
