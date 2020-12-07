@@ -1,4 +1,8 @@
 #!/bin/sh
+if [ -z "$1" ];then
+ spkg help
+ exit
+fi
 pkgdir=$(cat ~/.config/spkg/destination)
 if [ $1 = sync ]; then
  if [ $2 = file ]; then
