@@ -1,0 +1,16 @@
+#spkg source based repo using future spkg apis
+#concept only
+
+git htop https://github.com/htop-dev/htop
+ depends="
+  git name link
+  file name link
+  git name link"
+ build="./autogen.sh && ./configure && make"
+git name link
+ depends="
+  exec mkdir ~/cache"
+ build=make
+file name link
+ build=sync
+...
