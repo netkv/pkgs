@@ -1,1 +1,1 @@
-spkg sync {!@1} $2
+spkg sync ${!1} $2
