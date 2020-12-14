@@ -14,9 +14,9 @@ Tested on Linux, Android Termux, Solaris and FreeBSD. It also works on WSL.
 
 **Instalation**
 
-use installer: `wget https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/installer; sh installer` ***(recommended)***
+use installer: `wget https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/installer; sh installer; rm installer`
 
-use with sudo to install into root writable only directories ***(recommended)***
+use with sudo to install into root writable only directories
 
 and after that delete installer
 
@@ -59,7 +59,7 @@ other repos: https://github.com/Pan00Pernicek/scriptpkg/blob/master/repo-index
 
 **creating repo:** (normal, check testing repo for example of advanced repo methods)
 
-you can use anything online that stores **raw text only** **(recommended github)**
+you can use anything online that stores **raw text only**
 
 then add items to it using this template
 
