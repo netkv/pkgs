@@ -122,6 +122,9 @@ elif [ $1 = spkg-s ]; then
 elif [ $1 = spkg-g ]; then
  cd /tmp/spkgrepo
  cat $2
+elif [ $1 = confget ]; then
+ echo url=$(dirname $(spkg catconf $2 | grep url)) 
+ echo destination=$(dirname $(spkg catconf $2 | grep destination))
 elif [ $1 = search ]; then
  pkgname=$2
  cd ~/.config/spkg/
