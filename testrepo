@@ -1,0 +1,6 @@
+htop="git clone https://github.com/htop-dev/htop; ./autogen.sh && ./configure && make"
+${!1}
+cp $1 $(spkg catconf destination)
+cd ~/.config/spkg/packages
+echo "spkg 0" > $1
+echo "${!1}" >> $1
