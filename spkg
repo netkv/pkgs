@@ -48,7 +48,7 @@ elif [ $1 = update ]; then
  pkgname=$2
  cd $pkgdir
  if [ -f ~/.config/spkg/packages/$pkgname ]; then
-  if [ $(head -n $pkgname) = "#spkg appconf" ]; then
+  if [ $(head -n 1 $pkgname) = "#spkg appconf" ]; then
    echo custom config detected, using it: bash $pkgname
    bash $pkgname
   else
