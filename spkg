@@ -46,12 +46,13 @@ if [ $1 = sync ]; then
  fi
 elif [ $1 = update ]; then
  pkgname=$2
- cd $pkgdir
+ cd  ~/.config/spkg/packages
  if [ -f ~/.config/spkg/packages/$pkgname ]; then
   if [ $(head -n 1 $pkgname) = "#spkg appconf" ]; then
    echo custom config detected, using it: bash $pkgname
    bash $pkgname
   else
+   cd $pkgdir
    echo $(tput setaf 6) "Getting script config:"$(tput setaf 8)"spkg catconf $pkgname"$(tput sgr 0)
    pkgurl=$(spkg catconf $pkgname)
    spkg sync  $(dirname $(spkg catconf $pkgname | grep url)) $pkgname $(dirname $(spkg catconf $pkgname | grep destination))
