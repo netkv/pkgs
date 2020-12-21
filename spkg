@@ -48,9 +48,14 @@ elif [ $1 = update ]; then
  pkgname=$2
  cd $pkgdir
  if [ -f ~/.config/spkg/packages/$pkgname ]; then
-  echo $(tput setaf 6) "Getting script config:"$(tput setaf 8)"spkg catconf $pkgname"$(tput sgr 0)
-  pkgurl=$(spkg catconf $pkgname)
-  spkg sync  $(dirname $(spkg catconf $pkgname | grep url)) $pkgname $(dirname $(spkg catconf $pkgname | grep destination))
+  if [ $(head -n $pkgname) = "#spkg appconf" ]; then
+   echo custom config detected, using it: bash $pkgname
+   bash $pkgname
+  else
+   echo $(tput setaf 6) "Getting script config:"$(tput setaf 8)"spkg catconf $pkgname"$(tput sgr 0)
+   pkgurl=$(spkg catconf $pkgname)
+   spkg sync  $(dirname $(spkg catconf $pkgname | grep url)) $pkgname $(dirname $(spkg catconf $pkgname | grep destination))
+  fi
  else
   echo $(tput setaf 1)Sorry, but package does not exist.$(tput sgr0)
  fi
