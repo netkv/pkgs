@@ -48,7 +48,7 @@ elif [ $1 = update ]; then
  pkgname=$2
  cd  ~/.config/spkg/packages
  if [ -f ~/.config/spkg/packages/$pkgname ]; then
-  if [ $(head -n 1 $pkgname) = "#spkg appconf" ]; then
+  if [ $(head -n 1 $pkgname) = "spkg 0" ]; then
    echo custom config detected, using it: bash $pkgname
    bash $pkgname
   else
@@ -128,6 +128,8 @@ elif [ $1 = spkg-s ]; then
 elif [ $1 = spkg-g ]; then
  cd /tmp/spkgrepo
  cat $2
+elif [ $1 = 0 ]; then
+ exit
 elif [ $1 = confget ]; then
  echo url=$(dirname $(spkg catconf $2 | grep url)) 
  echo destination=$(dirname $(spkg catconf $2 | grep destination))
