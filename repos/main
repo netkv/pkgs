@@ -23,4 +23,5 @@ bed=https://raw.githubusercontent.com/comfies/bed/master/bed
 bim=https://raw.githubusercontent.com/lijaesela/bim/master/bim
 psgrep=https://raw.githubusercontent.com/Duncaen/dotfiles/master/bin/psgrep
 hex2rgb=https://raw.githubusercontent.com/Duncaen/dotfiles/master/bin/hex2rgb
+rfetch=https://raw.githubusercontent.com/Pan00Pernicek/rfetch/master/rfetch
 spkg sync ${!1} $2
