@@ -4,8 +4,10 @@ if [ -z "$1" ];then
  exit
 fi
 pkgdir=$(cat ~/.config/spkg/destination)
+config="~/.config/spkg"
+global="/etc/spkg"
 if [ $1 = sync ]; then
- if [ $2 = file ]; then
+ if [ $2 = -f ]; then
   pkgurl=$3
   dest=$4
   pkgname=$(basename $dest)
