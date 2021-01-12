@@ -1,11 +1,5 @@
 # scriptpkg
 
-**new repos without need of bash and basic support of deps and meta packages coming soon, test tesing repo and see**
-
-**spkg now uses curl instead of wget, might add support for both later**
-
-**!!!If you installed spkg before 10/10 2020 reinstall it, due to config changes it wont work anymore, (remove spkg folder in .config and spkg file in directory where you installed spkg and install again!!!**
-
 A script package manager to update remove and install shell scripts (and appimages, and dotfiles and any file now) and make installing and updating them easier.
 
 **Where does it works?**
@@ -85,4 +79,8 @@ todo: better managing of non executable files, better installer
 
 upgrading (changing url in repo)
 
+sharing items between users, most likely using /etc/spkg as global config path and user specifics as overlays
+
 ~~make my own distro~~
+
+
