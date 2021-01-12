@@ -57,7 +57,7 @@ elif [ $1 = update ]; then
    bash $pkgname
   else
    cd $pkgdir
-   echo $(tput setaf 6) "Getting script config:"$(tput setaf 8)"spkg catconf $pkgname"$(tput sgr 0)
+   echo $(tput setaf 6) "Getting script config:"$(tput setaf 8)"spkg catconf $pkgname"$(tput sgr0)
    pkgurl=$(spkg catconf $pkgname)
    spkg sync  $(dirname $(spkg catconf $pkgname | grep url)) $pkgname $(dirname $(spkg catconf $pkgname | grep destination))
   fi
