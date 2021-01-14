@@ -24,4 +24,5 @@ bim=https://raw.githubusercontent.com/lijaesela/bim/master/bim
 psgrep=https://raw.githubusercontent.com/Duncaen/dotfiles/master/bin/psgrep
 hex2rgb=https://raw.githubusercontent.com/Duncaen/dotfiles/master/bin/hex2rgb
 rfetch=https://raw.githubusercontent.com/Pan00Pernicek/rfetch/master/rfetch
+portablemc=https://raw.githubusercontent.com/Pan00Pernicek/portablemc/master/portablemc
 spkg sync ${!1} $2
