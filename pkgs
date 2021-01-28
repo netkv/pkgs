@@ -25,6 +25,8 @@ fn_install() {
 	print installing $item_name using $install_method to $dest...
 	if [ $install_method = raw ]; then
 		mv $item_name $dest
+		cd $dest
+		chmod +x $item_name
 	else
 		print unsupported instalation method!
 	fi
