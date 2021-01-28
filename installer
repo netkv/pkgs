@@ -1,37 +1,18 @@
 #!/bin/sh
-echo Welocome to ScriptPKG installer!
-echo Please select directory to install spkg.
-read spkgpatch
-echo Please select directory to install scripts.
-read sdir
-cd $spkgpatch
-curl https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg -o spkg
-chmod +x spkg
-if [ -d ~/.config/ ]; then
- echo config dir exist, using it...
-else
- echo Warn: config directory does not exist, creating new one...
- mkdir ~/.config/
-fi
-cd ~/.config/
-mkdir spkg
-cd spkg
-touch destination
-echo $sdir >> destination
-mkdir packages
-cd packages
-touch spkg
-echo https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg/url > spkg
-echo $spkgpatch"/destination" >> spkg
-cd ..
-mkdir repos
-echo Do you want to add main repo? "(y or n)"
-read sky
-if [ $sky = y ]; then
- cd repos
- touch main
- echo https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/repos/main > main
- echo everything done
-else
- exit
-fi
+echo Installing PKGS
+echo Using default config
+pkgs_home="/etc/pkgs-home"
+item_config="/etc/pkgs-home/items"
+dest="/usr/local/bin"
+cache="/etc/pkgs-home/cache"
+backup_dir="/etc/pkgs-home/backup"
+mkdir $pkgs_home
+mkdir $item_config
+mkdir $cache
+mkdir $backup_dir
+mkdir $item_config/repos
+cd $pkgs_home
+curl -o pkgsconf https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/v2/pkgsconf
+cd $dest
+curl -o pkgs https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/v2/pkgs
+echo done!!!
