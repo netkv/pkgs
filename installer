@@ -23,12 +23,12 @@ mkdir $backup_dir/config
 echo backup config
 cd $pkgs_home
 echo Downloading...
-curl -o pkgsconf https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/v2/pkgsconf
+curl -o pkgsconf https://raw.githubusercontent.com/Pan00Pernicek/pkgs/v2/pkgsconf
 cd $dest
-curl -o pkgs https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/v2/pkgs
+curl -o pkgs https://raw.githubusercontent.com/Pan00Pernicek/pkgs/v2/pkgs
 chmod +x pkgs
 echo Adding main repo
-pkgs repo-add https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/v2/repos/repotest main 
+pkgs repo-add https://raw.githubusercontent.com/Pan00Pernicek/pkgs/v2/repos/repotest main 
 echo Making it updateable
-pkgs sync https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/v2/pkgs
+pkgs sync https://raw.githubusercontent.com/Pan00Pernicek/pkgs/v2/pkgs
 echo done!!!
