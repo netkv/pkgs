@@ -2,10 +2,7 @@ fn_repo_init
 item spkg https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg
 item fet.sh https://raw.githubusercontent.com/6gk/fet.sh/master/fet.sh
 item neofetch https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
-	depends neofetch pipes
-	optional neofetch nanofetch
 item nanofetch https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch
-	optional nanofetch nanofetch-pwsh
 item nanofetch-pwsh https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch-pwsh
 item sbashfm https://raw.githubusercontent.com/Pan00Pernicek/sbashfm/master/sbashfm
 item bashtop https://raw.githubusercontent.com/aristocratos/bashtop/master/bashtop
