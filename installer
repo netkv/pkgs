@@ -18,4 +18,5 @@ curl -o pkgsconf https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/v2/pk
 cd $dest
 curl -o pkgs https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/v2/pkgs
 chmod +x pkgs
+pkgs repo-add https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/v2/repos/repotest main 
 echo done!!!
