@@ -10,11 +10,11 @@ debug=no
 raw_output=no
 	#disables colors
 ##directory definitions
-pkgs_home="/home/darek/dev/pkgs/"
-item_config="/home/darek/dev/pkgs/config"
-dest="/home/darek/dev/pkgs"
-cache="/home/darek/dev/pkgs/cache"
-backup_dir="/home/darek/dev/pkgs/backup"
+pkgs_home="/etc/pkgs-home"
+item_config="/etc/pkgs-home/items"
+dest="/usr/local/bin"
+cache="/etc/pkgs-home/cache"
+backup_dir="/etc/pkgs-home/backup"
 ##usage
 #pkgs fn_run is non-changeable duo to its need for scriping support
 user_install="install"
