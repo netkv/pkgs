@@ -6,3 +6,5 @@ how to use:
 run `pkgs exec make_conf` (wip)
 
 or read your config, easy
+
+default repo is `main` btw
