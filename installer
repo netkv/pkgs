@@ -6,17 +6,29 @@ item_config="/etc/pkgs-home/items"
 dest="/usr/local/bin"
 cache="/etc/pkgs-home/cache"
 backup_dir="/etc/pkgs-home/backup"
+echo Making dirs
 mkdir $pkgs_home
+echo home
 mkdir $item_config
+echo config
 mkdir $cache
+echo cache
 mkdir $backup_dir
+echo backup
 mkdir $item_config/repos
+echo repos
 mkdir $backup_dir/items
+echo backup items
 mkdir $backup_dir/config
+echo backup config
 cd $pkgs_home
+echo Downloading...
 curl -o pkgsconf https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/v2/pkgsconf
 cd $dest
 curl -o pkgs https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/v2/pkgs
 chmod +x pkgs
+echo Adding main repo
 pkgs repo-add https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/v2/repos/repotest main 
+echo Making it updateable
+pkgs sync https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/v2/pkgs
 echo done!!!
