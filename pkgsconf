@@ -1,0 +1,26 @@
+#!/bin/sh
+##feature config
+download_method=curl
+	##avaible:
+		#curl
+		#wget (wip)
+backup=yes
+backup_time=300 #seconds #wip
+debug=no
+raw_output=no
+	#disables colors
+##directory definitions
+pkgs_home="/home/darek/dev/pkgs/"
+item_config="/home/darek/dev/pkgs/config"
+dest="/home/darek/dev/pkgs"
+cache="/home/darek/dev/pkgs/cache"
+backup_dir="/home/darek/dev/pkgs/backup"
+##usage
+#pkgs fn_run is non-changeable duo to its need for scriping support
+user_install="install"
+user_update="update"
+user_remove="remove"
+user_backup_clear="clear"
+user_install_raw="sync"
+user_add_repo="repo-add"
+user_remove_repo="repo-remove"

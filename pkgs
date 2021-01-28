@@ -1,0 +1,240 @@
+#!/bin/sh
+config="/home/darek/dev/pkgs/pkgsconf"
+. $config
+print() {
+	if [ "$raw_output" = "yes" ]; then
+		echo $@
+	else
+		case "$1" in
+			warn)
+				status=warn
+				shift;;
+			ok)
+				status=okay 
+				shift;;
+			error)
+				status=error
+				shift;;
+			*)
+				status='*'
+		esac
+		echo "["$status"]" $@
+	fi
+}
+fn_install() {
+	print installing $item_name using $install_method to $dest...
+	if [ $install_method = raw ]; then
+		mv $item_name $dest
+	else
+		print unsupported instalation method!
+	fi
+}
+fn_download() {
+	cd ..
+	fn_clear_cache
+	print changing dir to cache...
+	if [ -z $cache ]; then
+		print error cache not found, check config!
+		exit
+	fi
+	cd $cache
+	if [ -z $2 ]; then
+		 item_name=$(basename $1)
+	else
+		item_name=$2
+	fi
+	link=$1
+	case "$download_method" in
+		curl)
+			curl -o $item_name $link;;
+		wget)
+			wget -o $link $item_name;;
+		*)
+			if [ -z $download_method ]; then
+				print error unknown download method, exiting...
+				exit
+			else
+				print error unsupported download method, check your config file!
+				exit
+			fi;;
+	esac
+	raw_link=$1
+	install_method=raw	
+}
+fn_addconf() {
+	echo "$1=$2" >> $item_name
+	if [ $debug = yes ]; then
+		print ok Adding configuration for property $1 with value $2 to $item_name...
+	fi
+}
+fn_delconf() {
+	rm $item_name
+}
+fn_makeconf() {
+	dir=$(pwd)
+	cd $item_config
+	if [ -f $item_name ]; then
+		print warn Old configuration file detected, deteleting...
+		fn_delconf $item_name
+	fi
+	print Creating configuration file for item...
+	fn_addconf item_name $item_name
+	if [ $repo_install=raw ];then
+		fn_addconf install_method repo_raw
+		fn_addconf repo_item $item_repo_request
+	fi
+	fn_addconf install_method $install_method
+	fn_addconf raw_link $raw_link
+	cd $dir
+}
+fn_sync() {
+	fn_download $1 #$2
+	fn_install
+	fn_makeconf
+}
+fn_remove() {
+	item_name=$1
+	cd $dest
+	if [ $backup = yes ]; then
+		print moving item $item_name to archive...
+		mv $item_name $backup_dir/items/
+		cd $item_config
+		print moving configuration for $item_name to archive...
+		mv $item_name $backup_dir/config/
+	else
+		print removing item $item_name...
+		rm $item_name
+		cd $item_config
+		print removing configuration for $item_name...
+		rm $item_name
+	fi
+}
+fn_repo_init() {
+	cd $cache
+	repo_type=$1
+}
+fn_clear_cache() {
+	rm -r $cache
+	mkdir $cache
+}
+item() {
+	echo fn_sync $2 > $1
+}
+fn_rawrepo() {
+	if [ $repo_action = sync ]; then
+		. ./$item_name
+		repo_install=raw
+	elif [ $repo_action = update ];then
+		. ./$repo_item
+		repo_action=sync
+		fn_sync $raw_link
+	fi
+}
+fn_reposync() {
+	if [ -z $repo_action ]; then
+		repo_action=sync
+	fi
+	cd ..
+	fn_clear_cache
+	item_name=$1
+	item_repo_request=$item_name
+	#. ./repotest
+	print Executing repo index...!
+	cd $cache
+	curl -o repo $(cat $item_config/repos/$2)
+	. ./repo
+}
+depends() {
+	echo fn_reposync $2 >> $1
+}
+optional() {
+	echo fn_depask $2 >> $1
+}
+fn_depask() {
+	print Do you want install $1 as optional dependency? "(y/n)"
+	if [ ask_fix = yes ]; then
+		opt=y
+		print warn forcing yes...!
+	elif [ ask_fix = no ]; then
+		print warn forcing no...!
+		opt=n
+	else
+		read opt
+	fi
+	if [ $opt = y ]; then
+		fn_reposync $1
+	fi
+}
+fn_update_raw() {
+	cd $item_config
+	. ./$1
+	fn_sync $raw_link
+}
+fn_update_from_repo() {
+	repo_action=update
+	cd $item_config
+	print Getting item configuration...
+	. ./$1
+	print Syncing from repo...
+	fn_reposync $1 $2
+	unset repo_action
+}
+fn_clear_backup() {
+	print removing config backup...
+	rm -r $backup_dir/config/*
+	print removing item backup...
+	rm -r $backup_dir/items/*
+}
+fn_repo_add() {
+	cd $item_config
+	cd repos
+	echo $1 > $2
+}
+fn_repo_del() {
+	cd $item_config
+	cd repos
+	rm $1
+}
+
+make_help() {
+echo "
+install item from repo: $user_install item repo
+update item: $user_update item
+remove item: $user_remove item
+sync item from link: $user_install_raw link name
+clear backups: $user_backup_clear
+add repo: $user_add_repo link name
+remove repo: $user_remove_repo name
+"
+}
+if [ $1 = fn_exec ]; then
+	shift
+	$@
+elif [ $1 = $user_install ]; then
+	shift
+	fn_reposync $@
+elif [ $1 = $user_update ]; then
+	shift
+	if [ $1 = "--repo" ]; then
+		shift
+		fn_update_from_repo $@
+	else
+		fn_update_raw $@
+	fi
+elif [ $1 = $user_remove ]; then
+	shift
+	fn_remove $@
+elif [ $1 = $user_install_raw ]; then
+	shift
+	fn_sync $@
+elif [ $1 = $user_backup_clear ]; then
+	shift
+	fn_clear_backup $@
+elif [ $1 = $user_add_repo ]; then
+	shift
+	fn_repo_add $@
+elif [ $1 = $user_remove_repo ]; then
+	shift
+	fn_repo_del $@
+fi
+
