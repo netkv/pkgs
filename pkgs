@@ -116,8 +116,7 @@ fn_repo_init() {
 	repo_type=$1
 }
 fn_clear_cache() {
-	rm -r $cache
-	mkdir $cache
+	rm -r $cache/*
 }
 item() {
 	echo fn_sync $2 > $1
