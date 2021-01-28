@@ -1,4 +1,4 @@
-# needs to update
+# wip readme
 install: basically run `installer` as root and it will do its thing
 
 how to use:
