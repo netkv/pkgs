@@ -26,7 +26,8 @@ fn_rawrepo
 if you want to add item that depends on another item add `depends <item-name> <dependency-name>` , it needs to be in same repo for now (hopefully i will fix that)
 if you want to add item that optionaly depends on another item add `optional <item-name> <dependency-name>` , ^^
 resulting repo can look like :
-```fn_repo_init
+```
+fn_repo_init
 item foo https://bar
   depends foo potato
   optional foo something
