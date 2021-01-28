@@ -5,7 +5,7 @@ download_method=curl
 		#curl
 		#wget (wip)
 backup=yes
-backup_time=300 #seconds #wip
+backup_time=300 #seconds #wip #not implemented yet!!!
 debug=no
 raw_output=no
 	#disables colors
@@ -16,7 +16,7 @@ dest="/usr/local/bin"
 cache="/etc/pkgs-home/cache"
 backup_dir="/etc/pkgs-home/backup"
 ##usage
-#pkgs fn_run is non-changeable duo to its need for scriping support
+#pkgs fn_run is non-changeable due to its need for scriping support
 user_install="install"
 user_update="update"
 user_remove="remove"
