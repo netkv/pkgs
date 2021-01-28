@@ -16,7 +16,7 @@ dest="/usr/local/bin"
 cache="/etc/pkgs-home/cache"
 backup_dir="/etc/pkgs-home/backup"
 ##usage
-#pkgs fn_run is non-changeable due to its need for scriping support
+#pkgs fn_exec is non-changeable due to its need for scriping support
 user_install="install"
 user_update="update"
 user_remove="remove"
