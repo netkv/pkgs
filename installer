@@ -11,8 +11,11 @@ mkdir $item_config
 mkdir $cache
 mkdir $backup_dir
 mkdir $item_config/repos
+mkdir $backup_dir/items
+mkdir $backup_dir/config
 cd $pkgs_home
 curl -o pkgsconf https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/v2/pkgsconf
 cd $dest
 curl -o pkgs https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/v2/pkgs
+chmod +x pkgs
 echo done!!!
