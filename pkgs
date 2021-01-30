@@ -213,7 +213,9 @@ clear backups: $user_backup_clear
 add repo: $user_add_repo link name
 remove repo: $user_remove_repo name"
 }
-if [ $1 = fn_exec ]; then
+if [ -z $1 ]; then
+	make_help
+elif [ $1 = fn_exec ]; then
 	shift
 	$@
 elif [ $1 = $user_install ]; then
