@@ -1,5 +1,5 @@
 fn_repo_init
-item spkg https://raw.githubusercontent.com/Pan00Pernicek/scriptpkg/master/spkg
+item pkgs https://raw.githubusercontent.com/Pan00Pernicek/pkgs/v2/pkgs
 item fet.sh https://raw.githubusercontent.com/6gk/fet.sh/master/fet.sh
 item neofetch https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
 item nanofetch https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch
