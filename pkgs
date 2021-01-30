@@ -118,7 +118,7 @@ fn_repo_init() {
 	repo_type=$1
 }
 fn_clear_cache() {
-	rm -r $cache/*
+	rm -r $cache/* || print ok Cache already cleared...
 }
 item() {
 	echo fn_sync $2 > $1
@@ -205,15 +205,13 @@ fn_repolistt() {
 	echo *
 }
 make_help() {
-echo "
-install item from repo: $user_install item repo
+echo "install item from repo: $user_install item repo
 update item: $user_update item
 remove item: $user_remove item
 sync item from link: $user_install_raw link name
 clear backups: $user_backup_clear
 add repo: $user_add_repo link name
-remove repo: $user_remove_repo name
-"
+remove repo: $user_remove_repo name"
 }
 if [ $1 = fn_exec ]; then
 	shift
