@@ -187,16 +187,21 @@ fn_clear_backup() {
 	rm -r $backup_dir/items/*
 }
 fn_repo_add() {
-	cd $item_config
-	cd repos
+	cd $item_config/repos
 	echo $1 > $2
 }
 fn_repo_del() {
-	cd $item_config
-	cd repos
+	cd $item_config/repos
 	rm $1
 }
-
+fn_list() {
+	cd $item_config
+	echo *
+}
+fn_repolistt() {
+	cd $item_config/repos
+	echo *
+}
 make_help() {
 echo "
 install item from repo: $user_install item repo
