@@ -10,7 +10,7 @@ print() {
 				status=warn
 				shift;;
 			ok)
-				status=okay 
+				status=ok 
 				shift;;
 			error)
 				status=error
