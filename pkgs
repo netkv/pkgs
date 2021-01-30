@@ -27,6 +27,8 @@ fn_install() {
 		mv $item_name $dest
 		cd $dest
 		chmod +x $item_name
+	elif [ $install_method = deb ]; then
+		dpkg -i $item_name
 	else
 		print unsupported instalation method!
 	fi
