@@ -221,7 +221,7 @@ elif [ $1 = $user_install ]; then
 	fn_reposync $@
 elif [ $1 = $user_update ]; then
 	shift
-	if [ $1 = "--repo" ]; then
+	if [ $1 = "-r" ]; then
 		shift
 		fn_update_from_repo $@
 	else
