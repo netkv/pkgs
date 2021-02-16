@@ -89,13 +89,18 @@ fn_makeconf() {
 	fi
 	fn_addconf install_method $install_method
 	fn_addconf raw_link $raw_link
-	fn_addconf mode $mode
-	cd $dir
-}
-fn_sync() {
 	if [ -z $mode ]; then
 		mode=explicit
 	fi
+	fn_addconf mode $mode
+	if [ -z $dependson ]; then
+		print warn No dependency defined!
+	else
+		fn_addconf dependson $dependson
+	fi
+	cd $dir
+}
+fn_sync() {
 	fn_download $1 #$2
 	fn_install
 	fn_makeconf
@@ -152,8 +157,12 @@ fn_reposync() {
 	. ./repo
 }
 depends() {
-	mode=implicit
+	echo makedep $2 >> $1
 	echo fn_reposync $2 >> $1
+}
+makedep() {
+	mode=implicit
+	dependson=$1
 }
 optional() {
 	echo fn_depask $2 >> $1
