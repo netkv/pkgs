@@ -159,7 +159,7 @@ fn_reposync() {
 		userepo=$2
 		repo=$2
 	fi
-	curl -o repo $(cat $item_config/repos/userepo)
+	curl -o repo $(cat $item_config/repos/$userepo)
 	. ./repo
 }
 depends() {
