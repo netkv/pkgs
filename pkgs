@@ -205,7 +205,7 @@ fn_list() {
 	cd $item_config
 	echo *
 }
-fn_repolistt() {
+fn_repolist() {
 	cd $item_config/repos
 	echo *
 }
@@ -216,7 +216,9 @@ remove item: $user_remove item
 sync item from link: $user_install_raw link name
 clear backups: $user_backup_clear
 add repo: $user_add_repo link name
-remove repo: $user_remove_repo name"
+remove repo: $user_remove_repo name
+list packages: $user_list
+list repos $user_repo_list"
 }
 if [ -z $1 ]; then
 	make_help
@@ -249,5 +251,11 @@ elif [ $1 = $user_add_repo ]; then
 elif [ $1 = $user_remove_repo ]; then
 	shift
 	fn_repo_del $@
+elif [ $1 = $user_list ]; then
+	shift
+	fn_list $@
+elif [ $1 = $user_repo_list ]; then
+	shift
+	fn_repolist $@
 fi
 
