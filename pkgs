@@ -153,7 +153,13 @@ fn_reposync() {
 	#. ./repotest
 	print Executing repo index...!
 	cd $cache
-	curl -o repo $(cat $item_config/repos/$2)
+	if [ -z $2 ]; then
+		userepo=$repo
+	else
+		userepo=$2
+		repo=$2
+	fi
+	curl -o repo $(cat $item_config/repos/userepo)
 	. ./repo
 }
 depends() {
