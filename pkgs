@@ -163,7 +163,7 @@ fn_reposync() {
 	. ./repo
 }
 depends() {
-	echo makedep $2 >> $1
+	echo makedep $1 >> $1
 	echo fn_reposync $2 >> $1
 }
 makedep() {
