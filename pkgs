@@ -228,7 +228,11 @@ fn_mark() {
 	cd $item_config
 	. ./$1
 	sed -i 's/"mode=$mode"/"mode=$2"/g' $1
-	print replacing $mode with $2
+	print replacing $mode with $2 in $1
+	if [ $debug = yes ]; then
+		print warn $(pwd)
+		cat $1
+	fi
 }
 make_help() {
 echo "install item from repo: $user_install item repo
