@@ -93,7 +93,7 @@ fn_makeconf() {
 	cd $dir
 }
 fn_sync() {
-	if [ -z mode ]; then
+	if [ -z $mode ]; then
 		mode=explicit
 	fi
 	fn_download $1 #$2
