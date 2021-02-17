@@ -134,6 +134,7 @@ fn_remove_deps() {
 				fn_remove $item
 			fi
 		fi
+		unset dependson
 	done
 }
 fn_smart_rm() {
