@@ -128,12 +128,15 @@ fn_remove_deps() {
 	do
 		. ./$item
 		if [ $mode = implicit ]; then
-		print implicit package detected $item
 			if [ ! -f $item_config/$dependson ]; then
-				print now i would remove this one $item
+				fn_remove $item
 			fi
 		fi
 	done
+}
+fn_smart_rm() {
+	fn_mark $1 implicit
+	fn_remove_deps
 }
 fn_repo_init() {
 	cd $cache
