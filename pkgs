@@ -128,7 +128,9 @@ fn_remove_deps() {
 	do
 		. ./$item
 		if [ $mode = implicit ]; then
-			if [ ! -f $item_config/$dependson ]; then
+			if [ -z $dependson ]; then
+				fn_remove $item
+			elif [ ! -f $item_config/$dependson ]; then
 				fn_remove $item
 			fi
 		fi
