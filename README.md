@@ -1,4 +1,7 @@
 # wip readme
+*finnaly made depencdencies kind of work better, buts its all one big hack, it marks it package implicit and then removes orphans, but it work*
+
+
 install: basically run `installer` as root and it will do its thing
 
 ##how to use:
