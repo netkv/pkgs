@@ -126,13 +126,14 @@ fn_remove_deps() {
 	cd $item_config
 	for item in $(ls $item_config)
 	do
-	. ./$item
-	if [ $mode = implicit ]; then
-	print implicit package detected
-		if [ -f $item_config/$dependson ]; then
-			print now i would remove this one
+		. ./$item
+		if [ $mode = implicit ]; then
+		print implicit package detected
+			if [ -f $item_config/$dependson ]; then
+				print now i would remove this one
+			fi
 		fi
-	fi
+	done
 }
 fn_repo_init() {
 	cd $cache
