@@ -137,7 +137,7 @@ fn_remove_deps() {
 		unset dependson
 	done
 }
-fn_smart_rm() {
+fn_mark_implicit_remove_deps() {
 	fn_mark $1 implicit
 	fn_remove_deps
 }
@@ -255,7 +255,9 @@ fn_mark() {
 make_help() {
 echo "install item from repo: $user_install item repo
 update item: $user_update item
+	-r for updating from repo
 remove item: $user_remove item
+	-f for force removing (using older remove method)
 sync item from link: $user_install_raw link name
 clear backups: $user_backup_clear
 add repo: $user_add_repo link name
@@ -281,7 +283,12 @@ elif [ $1 = $user_update ]; then
 	fi
 elif [ $1 = $user_remove ]; then
 	shift
-	fn_remove $@
+	if [ $1 = "-f" ]; then
+		shift
+		fn_remove $@
+	else
+		fn_mark_implicit_remove_deps $@
+	fi
 elif [ $1 = $user_install_raw ]; then
 	shift
 	fn_sync $@
