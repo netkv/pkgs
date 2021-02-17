@@ -128,9 +128,9 @@ fn_remove_deps() {
 	do
 		. ./$item
 		if [ $mode = implicit ]; then
-		print implicit package detected
-			if [ -f $item_config/$dependson ]; then
-				print now i would remove this one
+		print implicit package detected $item
+			if [ ! -f $item_config/$dependson ]; then
+				print now i would remove this one $item
 			fi
 		fi
 	done
