@@ -26,7 +26,7 @@ fn_install() {
 	if [ $install_method = raw ]; then
 		if [ $compress_bin = yes ]; then
 			$compress_method $item_name
-			if [ -d $item_config/bin ]; then
+			if [ ! -d $item_config/bin ]; then
 				mkdir $item_config/bin
 			fi
 			mv $item_name.$compress_method $item_config/bin/
