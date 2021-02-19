@@ -1,6 +1,9 @@
 #!/bin/sh
 echo Installing PKGS
 echo Using default config
+if [ -d ~/.config/ ]; then
+  mkdir ~/.config
+fi
 pkgs_home="~/.config/pkgs-home"
 item_config="~/.config/pkgs-home/items"
 dest="/usr/local/bin"
