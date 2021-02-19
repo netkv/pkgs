@@ -24,7 +24,7 @@ print() {
 fn_install() {
 	print installing $item_name using $install_method to $dest...
 	if [ $install_method = raw ]; then
-		if [ $compress_bin=yes ]; then
+		if [ $compress_bin = yes ]; then
 			$compress_method $item_name
 			if [ -d $item_config/bin ]; then
 				mkdir $item_config/bin
