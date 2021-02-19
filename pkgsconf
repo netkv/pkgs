@@ -8,7 +8,7 @@ backup=yes
 backup_time=300 #seconds #wip #not implemented yet!!!
 raw_output=no
 ##directory definitions
-pkgs_home="~/.config/pkgs-home"
+pkgs_home=~/.config/pkgs-home
 item_config="$pkgs-home/items"
 dest="/usr/local/bin"
 cache="$pkgs-home/cache"
