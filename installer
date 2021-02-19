@@ -1,14 +1,11 @@
 #!/bin/sh
 echo Installing PKGS
 echo Using default config
-if [ -d ~/.config/ ]; then
-  mkdir ~/.config
-fi
-pkgs_home=~/.config/pkgs-home
-item_config=~/.config/pkgs-home/items
-dest=/usr/local/bin
-cache=~/.config/pkgs-home/cache
-backup_dir=~/.config/pkgs-home/backup
+pkgs_home="/etc/pkgs-home"
+item_config="/etc/pkgs-home/items"
+dest="/usr/local/bin"
+cache="/etc/pkgs-home/cache"
+backup_dir="/etc/pkgs-home/backup"
 echo Making dirs
 mkdir $pkgs_home
 echo home
