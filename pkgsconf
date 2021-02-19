@@ -9,10 +9,10 @@ backup_time=300 #seconds #wip #not implemented yet!!!
 raw_output=no
 ##directory definitions
 pkgs_home=~/.config/pkgs-home
-item_config="$pkgs-home/items"
+item_config=$pkgs-home/items
 dest="/usr/local/bin"
-cache="$pkgs-home/cache"
-backup_dir="$pkgs-home/backup"
+cache=$pkgs-home/cache
+backup_dir=$pkgs-home/backup
 ##usage
 #pkgs fn_exec is non-changeable due to its need for scriping support
 user_install="install"
