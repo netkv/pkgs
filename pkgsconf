@@ -6,10 +6,7 @@ download_method=curl
 		#wget (wip)
 backup=yes
 backup_time=300 #seconds #wip #not implemented yet!!!
-debug=no
 raw_output=no
-	#disables colors
-dynamic_dest=yes
 ##directory definitions
 pkgs_home="/etc/pkgs-home"
 item_config="/etc/pkgs-home/items"
@@ -28,4 +25,8 @@ user_remove_repo="repo-remove"
 user_list="list"
 user_repo_list="repo-list"
 user_search="search"
-
+##debug
+debug=no
+compress_bin=no
+compress_backup=no
+compress_method=xz
