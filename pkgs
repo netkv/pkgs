@@ -33,7 +33,9 @@ fn_install() {
 			cd $dest
 			print making uncompressor...
 			echo "#!/bin/sh" > $item_name
-			echo "cp $item_config/bin/$item_name.$compress_method /tmp; cd /tmp; un$compress_method $item_name.$compress_method; chmod +x $item_name; ./$item_name; rm $item_name" >> $item_name
+			echo -n "cp $item_config/bin/$item_name.$compress_method /tmp; cd /tmp; un$compress_method $item_name.$compress_method; chmod +x $item_name; ./$item_name" >> $item_name
+			echo -n '$@' >> $item_name
+			echo "rm $item_name" >> $item_name
 			chmod +x $item_name
 		else
 			mv $item_name $dest
