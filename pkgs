@@ -1,5 +1,5 @@
 #!/bin/sh
-config=~/.config/pkgs-home/pkgsconf
+config="/etc/pkgs-home/pkgsconf"
 . $config
 print() {
 	if [ "$raw_output" = "yes" ]; then
