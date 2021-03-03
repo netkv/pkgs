@@ -27,5 +27,5 @@ item bim https://raw.githubusercontent.com/lijaesela/bim/master/bim
 item psgrep https://raw.githubusercontent.com/Duncaen/dotfiles/master/bin/psgrep
 item hex2rgb https://raw.githubusercontent.com/Duncaen/dotfiles/master/bin/hex2rgb
 item rfetch https://raw.githubusercontent.com/Pan00Pernicek/rfetch/master/rfetch
-item portablemc https://raw.githubusercontent.com/Pan00Pernicek/portablemc/master/portablemc
+item portablemc https://raw.githubusercontent.com/mindstorm38/portablemc/master/portablemc.py
 fn_rawrepo
