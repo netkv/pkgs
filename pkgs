@@ -7,16 +7,16 @@ print() {
 	else
 		case "$1" in
 			warn)
-				status=warn
+				status="warn "
 				shift;;
 			ok)
-				status=ok 
+				status="ok   " 
 				shift;;
 			error)
-				status=error
+				status="error"
 				shift;;
 			*)
-				status='*'
+				status="info "
 		esac
 		echo "$status →" $@
 	fi
