@@ -1,18 +1,27 @@
 fn_repo_init
+#Do not define "sys bin item sh" because its needed to even run pkgs so adding it here would be just useless
+
 item pkgs https://raw.githubusercontent.com/Pan00Pernicek/pkgs/v2/pkgs
 item fet.sh https://raw.githubusercontent.com/6gk/fet.sh/master/fet.sh
 item neofetch https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
 	sys bin neofetch bash
 item nanofetch https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch
 item nanofetch-pwsh https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch-pwsh
+	sys bin nanofetch-pwsh pwsh
 item sbashfm https://raw.githubusercontent.com/Pan00Pernicek/sbashfm/master/sbashfm
 item bashtop https://raw.githubusercontent.com/aristocratos/bashtop/master/bashtop
+	sys bin bashtop bash
 item meme https://raw.githubusercontent.com/alexanderepstein/Bash-Snippets/master/meme/meme
 item currency https://raw.githubusercontent.com/alexanderepstein/Bash-Snippets/master/currency/currency
 item bashcheck https://raw.githubusercontent.com/hannob/bashcheck/master/bashcheck
+	sys bin bashcheck bash
 item helloworld https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/hello-world.sh
+	sys bin helloworld bash
 item spattern https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/special-pattern.sh
+	sys bin spattern bash
 item encrypt https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/encrypt.sh
+	sys bin encrypt gpg
+	sys bin encrypt bash
 item dirsize https://raw.githubusercontent.com/ruanyf/simple-bash-scripts/master/scripts/directorysize.sh
 item fff https://raw.githubusercontent.com/dylanaraps/fff/master/fff
 item pipes https://raw.githubusercontent.com/pipeseroni/pipes.sh/master/pipes.sh
@@ -23,6 +32,7 @@ item pfetch https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
 item nerdfetch https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch
 item mfetch https://raw.githubusercontent.com/numpadd/mfetch/master/mfetch
 item bed https://raw.githubusercontent.com/comfies/bed/master/bed
+	sys bed encrypt bash
 item bim https://raw.githubusercontent.com/lijaesela/bim/master/bim
 	sys bin bim bash
 	depends bim bed
@@ -31,6 +41,7 @@ item psgrep https://raw.githubusercontent.com/Duncaen/dotfiles/master/bin/psgrep
 item hex2rgb https://raw.githubusercontent.com/Duncaen/dotfiles/master/bin/hex2rgb
 item rfetch https://raw.githubusercontent.com/Pan00Pernicek/rfetch/master/rfetch
 item portablemc https://raw.githubusercontent.com/mindstorm38/portablemc/master/portablemc.py
+	sys bin portablemc python
 item exsh https://raw.githubusercontent.com/Pan00Pernicek/exsh/master/exsh
 	sys bin exsh execlineb
 fn_rawrepo
