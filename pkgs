@@ -109,7 +109,7 @@ fn_makeconf() {
 	fi
 	fn_addconf mode $mode
 	if [ -z $dependson ]; then
-		if [ $mode = implicit]; then
+		if [ $mode = implicit ]; then
 			print warn No dependency defined!
 		fi
 	else
