@@ -29,5 +29,6 @@ item hex2rgb https://raw.githubusercontent.com/Duncaen/dotfiles/master/bin/hex2r
 item rfetch https://raw.githubusercontent.com/Pan00Pernicek/rfetch/master/rfetch
 item portablemc https://raw.githubusercontent.com/mindstorm38/portablemc/master/portablemc.py
 item exsh https://raw.githubusercontent.com/Pan00Pernicek/exsh/master/exsh
-	sys bin exsh execline
+	sys bin exsh execlineb)
+	sys arch exsh aarch64 riscv
 fn_rawrepo

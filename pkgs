@@ -218,6 +218,24 @@ sys() {
 			else
 				echo false > $2
 			fi;;
+		arch)
+			supported=0
+			shift
+			check_item=$1
+			shift
+			for arch in "$@"
+			do
+				if [ "$(uname -m)" = "$arch" ]; then
+					supported=$(( supported + 1 ))
+				else
+					false
+				fi
+			done
+			if [ $arch -gt 0 ]; then
+				true
+			else
+				echo false > $check_item
+			fi
 	esac
 }
 fn_depask() {
