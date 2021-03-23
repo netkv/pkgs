@@ -2,6 +2,7 @@ fn_repo_init
 item pkgs https://raw.githubusercontent.com/Pan00Pernicek/pkgs/v2/pkgs
 item fet.sh https://raw.githubusercontent.com/6gk/fet.sh/master/fet.sh
 item neofetch https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
+	sys bin neofetch bash
 item nanofetch https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch
 item nanofetch-pwsh https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch-pwsh
 item sbashfm https://raw.githubusercontent.com/Pan00Pernicek/sbashfm/master/sbashfm
@@ -17,11 +18,13 @@ item fff https://raw.githubusercontent.com/dylanaraps/fff/master/fff
 item pipes https://raw.githubusercontent.com/pipeseroni/pipes.sh/master/pipes.sh
 item fportm https://raw.githubusercontent.com/Pan00Pernicek/fportm/main/fportm
 item bashbox https://raw.githubusercontent.com/Pan00Pernicek/bashbox/master/bashbox
+	sys bin bashbox bash
 item pfetch https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch
 item nerdfetch https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/master/nerdfetch
 item mfetch https://raw.githubusercontent.com/numpadd/mfetch/master/mfetch
 item bed https://raw.githubusercontent.com/comfies/bed/master/bed
 item bim https://raw.githubusercontent.com/lijaesela/bim/master/bim
+	sys bin bim bash
 	depends bim bed
 	optional bim bed
 item psgrep https://raw.githubusercontent.com/Duncaen/dotfiles/master/bin/psgrep
@@ -30,5 +33,4 @@ item rfetch https://raw.githubusercontent.com/Pan00Pernicek/rfetch/master/rfetch
 item portablemc https://raw.githubusercontent.com/mindstorm38/portablemc/master/portablemc.py
 item exsh https://raw.githubusercontent.com/Pan00Pernicek/exsh/master/exsh
 	sys bin exsh execlineb
-	sys arch exsh aarch64 riscv x86_64
 fn_rawrepo
