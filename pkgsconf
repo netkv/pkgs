@@ -25,6 +25,7 @@ user_remove_repo="repo-remove"
 user_list="list"
 user_repo_list="repo-list"
 user_search="search"
+user_mark="mark"
 ##debug
 debug=no
 compress_bin=no

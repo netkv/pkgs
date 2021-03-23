@@ -99,7 +99,7 @@ fn_makeconf() {
 	print Creating configuration file for item...
 	fn_addconf item_name $item_name
 	if [ $repo_install=raw ];then
-		fn_addconf install_method repo_raw
+		fn_addconf repo_method repo_raw
 		fn_addconf repo_item $item_repo_request
 	fi
 	fn_addconf install_method $install_method
@@ -109,7 +109,9 @@ fn_makeconf() {
 	fi
 	fn_addconf mode $mode
 	if [ -z $dependson ]; then
-		print warn No dependency defined!
+		if [ $mode = implicit]; then
+			print warn No dependency defined!
+		fi
 	else
 		fn_addconf dependson $dependson
 	fi
@@ -278,7 +280,8 @@ clear backups: $user_backup_clear
 add repo: $user_add_repo link name
 remove repo: $user_remove_repo name
 list packages: $user_list
-list repos $user_repo_list"
+list repos: $user_repo_list
+mark package as: $user_mark package mode"
 }
 if [ -z $1 ]; then
 	make_help
@@ -322,5 +325,7 @@ elif [ $1 = $user_list ]; then
 elif [ $1 = $user_repo_list ]; then
 	shift
 	fn_repolist $@
+elif [ $1 = $user_mark ]; then
+	shift
+	fn_mark $@
 fi
-
