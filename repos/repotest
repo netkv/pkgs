@@ -30,5 +30,5 @@ item rfetch https://raw.githubusercontent.com/Pan00Pernicek/rfetch/master/rfetch
 item portablemc https://raw.githubusercontent.com/mindstorm38/portablemc/master/portablemc.py
 item exsh https://raw.githubusercontent.com/Pan00Pernicek/exsh/master/exsh
 	sys bin exsh execlineb
-	sys arch exsh aarch64 riscv
+	sys arch exsh aarch64 riscv x86_64
 fn_rawrepo
