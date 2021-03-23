@@ -28,6 +28,8 @@ fn_rawrepo
 ```
 if you want to add item that depends on another item add `depends <item-name> <dependency-name>` , it needs to be in same repo for now (hopefully i will fix that)
 if you want to add item that optionaly depends on another item add `optional <item-name> <dependency-name>` , ^^
+if you want add item that depends on some command provided by system add `sys bin <item-name> <cmd>` ,
+if you want add item that can run only on certain cpu architectures add `sys arch <item-name> <arch1> <arch2> ...`,
 resulting repo can look like :
 ```
 fn_repo_init
@@ -36,7 +38,9 @@ item foo https://bar
   optional foo something
 item potato https://potato
   depends potato tomato
+  sys bin potato awk
 item something https://something
+  sys arch aarch64 armv7l armv7hl
 item tomato https://tomato
 fn_rawrepo
 ```
