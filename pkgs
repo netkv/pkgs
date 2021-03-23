@@ -1,4 +1,4 @@
-f#!/bin/sh
+#!/bin/sh
 config="/etc/pkgs-home/pkgsconf"
 . $config
 print() {
