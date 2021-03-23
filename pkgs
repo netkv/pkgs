@@ -170,6 +170,7 @@ item() {
 }
 fn_rawrepo() {
 	if [ $repo_action = sync ]; then
+		cat $item_name
 		. ./$item_name
 		repo_install=raw
 	elif [ $repo_action = update ];then
