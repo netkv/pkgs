@@ -18,7 +18,7 @@ print() {
 			*)
 				status="info "
 		esac
-		echo "$status →" $@
+		echo "$status → $@"
 	fi
 }
 fn_install() {
