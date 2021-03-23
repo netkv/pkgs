@@ -170,7 +170,6 @@ item() {
 }
 fn_rawrepo() {
 	if [ $repo_action = sync ]; then
-		cat $item_name
 		. ./$item_name
 		repo_install=raw
 	elif [ $repo_action = update ];then
@@ -213,7 +212,7 @@ optional() {
 sys() {
 	case "$1" in
 		bin)
-			if command -v $3; then
+			if command -v $3 > /dev/null; then
 				true
 			else
 				echo false > $2
