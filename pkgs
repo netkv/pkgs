@@ -231,7 +231,7 @@ sys() {
 					false
 				fi
 			done
-			if [ $arch -gt 0 ]; then
+			if [ $supported -gt 0 ]; then
 				true
 			else
 				echo false > $check_item
