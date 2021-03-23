@@ -30,5 +30,5 @@ chmod +x pkgs
 echo Adding main repo
 pkgs repo-add https://raw.githubusercontent.com/Pan00Pernicek/pkgs/v2/repos/repotest main 
 echo Making it updateable
-pkgs sync https://raw.githubusercontent.com/Pan00Pernicek/pkgs/v2/pkgs
+pkgs fn_exec fn_sync https://raw.githubusercontent.com/Pan00Pernicek/pkgs/v2/pkgs
 echo done!!!
