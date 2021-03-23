@@ -235,7 +235,7 @@ sys() {
 				true
 			else
 				echo false > $check_item
-			fi
+			fi;;
 	esac
 }
 fn_depask() {
