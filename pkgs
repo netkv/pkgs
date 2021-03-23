@@ -209,6 +209,16 @@ makedep() {
 optional() {
 	echo fn_depask $2 >> $1
 }
+sys() {
+	case "$1" in
+		bin)
+			echo "if command -v $3; then
+	true
+else
+	exit
+fi" >> $2;;
+esac
+}
 fn_depask() {
 	print Do you want install $1 as optional dependency? "(y/n)"
 	if [ ask_fix = yes ]; then

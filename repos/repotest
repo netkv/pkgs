@@ -22,11 +22,12 @@ item nerdfetch https://raw.githubusercontent.com/ThatOneCalculator/NerdFetch/mas
 item mfetch https://raw.githubusercontent.com/numpadd/mfetch/master/mfetch
 item bed https://raw.githubusercontent.com/comfies/bed/master/bed
 item bim https://raw.githubusercontent.com/lijaesela/bim/master/bim
-  depends bim bed
-  optional bim bed
+	depends bim bed
+	optional bim bed
 item psgrep https://raw.githubusercontent.com/Duncaen/dotfiles/master/bin/psgrep
 item hex2rgb https://raw.githubusercontent.com/Duncaen/dotfiles/master/bin/hex2rgb
 item rfetch https://raw.githubusercontent.com/Pan00Pernicek/rfetch/master/rfetch
 item portablemc https://raw.githubusercontent.com/mindstorm38/portablemc/master/portablemc.py
 item exsh https://raw.githubusercontent.com/Pan00Pernicek/exsh/master/exsh
+	sys bin exsh execline
 fn_rawrepo
