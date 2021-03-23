@@ -1,4 +1,4 @@
-#!/bin/sh
+f#!/bin/sh
 config="/etc/pkgs-home/pkgsconf"
 . $config
 print() {
@@ -213,12 +213,12 @@ optional() {
 sys() {
 	case "$1" in
 		bin)
-			echo "if command -v $3; then
-	true
-else
-	exit
-fi" >> $2;;
-esac
+			if command -v $3; then
+				true
+			else
+				echo false > $2
+			fi;;
+	esac
 }
 fn_depask() {
 	print Do you want install $1 as optional dependency? "(y/n)"
