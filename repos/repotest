@@ -44,4 +44,8 @@ item portablemc https://raw.githubusercontent.com/mindstorm38/portablemc/master/
 	sys bin portablemc python
 item exsh https://raw.githubusercontent.com/Pan00Pernicek/exsh/master/exsh
 	sys bin exsh execlineb
+item huh https://raw.githubusercontent.com/Pan00Pernicek/huh/v2/huh
+item huhfetch https://raw.githubusercontent.com/Pan00Pernicek/huh/v2/example/huhfetch
+	depends huhfetch huh
+	sys bin huhfetch tput
 fn_rawrepo
