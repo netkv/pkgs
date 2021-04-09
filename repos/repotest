@@ -48,4 +48,6 @@ item huhfetch https://raw.githubusercontent.com/Pan00Pernicek/huh/v2/example/huh
 	sys bin huhfetch tput
 item ldar https://raw.githubusercontent.com/Pan00Pernicek/ldar/master/ldar
 	sys bin ldar expr
+item nanofetch-execline https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch-execline
+	sys bin nanofetch-execline execlineb
 fn_rawrepo
