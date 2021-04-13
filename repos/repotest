@@ -6,7 +6,7 @@ item fet.sh https://raw.githubusercontent.com/6gk/fet.sh/master/fet.sh
 item neofetch https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
 	sys bin neofetch bash
 item nanofetch https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch
-item nanofetch-pwsh https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch-pwsh
+item nanofetch.ps1 https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch.ps1
 	sys bin nanofetch-pwsh pwsh
 item sbashfm https://raw.githubusercontent.com/Pan00Pernicek/sbashfm/master/sbashfm
 item bashtop https://raw.githubusercontent.com/aristocratos/bashtop/master/bashtop
@@ -42,6 +42,7 @@ item portablemc https://raw.githubusercontent.com/mindstorm38/portablemc/master/
 	sys bin portablemc python
 item exsh https://raw.githubusercontent.com/Pan00Pernicek/exsh/master/exsh
 	sys bin exsh execlineb
+	optional exsh var
 item huh https://raw.githubusercontent.com/Pan00Pernicek/huh/v2/huh
 item huhfetch https://raw.githubusercontent.com/Pan00Pernicek/huh/v2/example/huhfetch
 	depends huhfetch huh
@@ -50,4 +51,6 @@ item ldar https://raw.githubusercontent.com/Pan00Pernicek/ldar/master/ldar
 	sys bin ldar expr
 item nanofetch-execline https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch-execline
 	sys bin nanofetch-execline execlineb
+item var https://raw.githubusercontent.com/Pan00Pernicek/exsh/master/var
+	sys bin var execlineb
 fn_rawrepo
