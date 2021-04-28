@@ -215,7 +215,7 @@ sys() {
 			if command -v $3 > /dev/null; then
 				true
 			else
-				echo false > $2
+				echo "echo cant install because system binary $3 doesnt exist" > $2
 			fi;;
 		arch)
 			supported=0
@@ -233,9 +233,26 @@ sys() {
 			if [ $supported -gt 0 ]; then
 				true
 			else
-				echo false > $check_item
+				echo "echo unsupported architecture" > $check_item
+			fi;;
+		file)
+			if [ -f $3 ]; then
+				true
+			else
+				echo "echo cant install because file $3 doesnt exist" > $2
+			fi;;
+		dir)
+			if [ -f $3 ]; then
+				true
+			else
+				echo "echo cant install because directory $3 doesnt exist" > $2
 			fi;;
 	esac
+}
+run() {
+	package="$1"
+	shift
+	echo "$@" > "$package"
 }
 fn_depask() {
 	print Do you want install $1 as optional dependency? "(y/n)"
