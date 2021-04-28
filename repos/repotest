@@ -50,6 +50,5 @@ item ldar https://raw.githubusercontent.com/Pan00Pernicek/ldar/master/ldar
 	sys bin ldar expr
 item nanofetch-execline https://raw.githubusercontent.com/Pan00Pernicek/nanofetch/master/nanofetch-execline
 	sys bin nanofetch-execline execlineb
-	sys file nanofetch-execline /dev/nulla
-	sys dir nanofetch-execline /dev
+	run nanofetch-execline pwd
 fn_rawrepo
