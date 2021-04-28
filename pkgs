@@ -252,7 +252,7 @@ sys() {
 run() {
 	package="$1"
 	shift
-	echo "$@" > "$package"
+	echo "$@" >> "$package"
 }
 fn_depask() {
 	print Do you want install $1 as optional dependency? "(y/n)"
