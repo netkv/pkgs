@@ -52,4 +52,6 @@ item nanofetch-execline https://raw.githubusercontent.com/Pan00Pernicek/nanofetc
 	sys bin nanofetch-execline execlineb
 item fun https://raw.githubusercontent.com/Pan00Pernicek/exutil/master/fun/fun
 	sys bin fun execlineb
+item source https://raw.githubusercontent.com/Pan00Pernicek/exutil/master/source/source
+	sys bin source execlineb
 fn_rawrepo
