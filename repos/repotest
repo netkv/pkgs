@@ -2,6 +2,7 @@ fn_repo_init
 #Do not define "sys bin item sh" because its needed to even run pkgs so adding it here would be just useless
 
 item pkgs https://raw.githubusercontent.com/Pan00Pernicek/pkgs/v2/pkgs
+item cput https://raw.githubusercontent.com/Pan00Pernicek/cput/main/cput
 item fet.sh https://raw.githubusercontent.com/6gk/fet.sh/master/fet.sh
 item neofetch https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch
 	sys bin neofetch bash
