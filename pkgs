@@ -175,8 +175,6 @@ item() {
 fn_build() {
 	if [ $build = yes ]; then
 		print warn debug!
-		echo $buildinfo | micro
-		read idkjusttest
 		fn_clear_cache
 		cd $cache
 		eval $buildinfo
