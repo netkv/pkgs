@@ -168,14 +168,28 @@ fn_clear_cache() {
 item() {
 	echo fn_sync $2 > $1
 }
+fn_build() {
+	if [ $build = yes ]; then
+		print warn debug!
+		echo $buildinfo | micro
+		read idkjusttest
+		fn_clear_cache
+		cd $cache
+		$buildinfo
+	fi
+}
 fn_rawrepo() {
 	if [ $repo_action = sync ]; then
+		unset build
 		. ./$item_name
 		repo_install=raw
+		build
 	elif [ $repo_action = update ];then
+		unset build
 		. ./$repo_item
 		repo_action=sync
 		fn_sync $raw_link
+		build
 	fi
 }
 fn_reposync() {
@@ -253,6 +267,12 @@ run() {
 	package="$1"
 	shift
 	echo "$@" >> "$package"
+}
+build(){
+	package="$1"
+	shift
+	echo 'build=yes' >> "$package"
+	echo buildinfo="\""$@"\"" >> "$package"
 }
 fn_depask() {
 	print Do you want install $1 as optional dependency? "(y/n)"
