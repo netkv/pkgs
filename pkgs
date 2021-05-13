@@ -22,6 +22,10 @@ print() {
 	fi
 }
 fn_install() {
+	if [ -z $install_method ]; then
+		install_method=raw
+		print warn missing install method, assuming raw...
+	fi
 	print installing $item_name using $install_method to $dest...
 	if [ $install_method = raw ]; then
 		if [ $compress_bin = yes ]; then
