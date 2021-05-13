@@ -175,7 +175,7 @@ fn_build() {
 		read idkjusttest
 		fn_clear_cache
 		cd $cache
-		$buildinfo
+		eval $buildinfo
 	fi
 }
 fn_rawrepo() {
