@@ -183,13 +183,13 @@ fn_rawrepo() {
 		unset build
 		. ./$item_name
 		repo_install=raw
-		build
+		fn_build
 	elif [ $repo_action = update ];then
 		unset build
 		. ./$repo_item
 		repo_action=sync
 		fn_sync $raw_link
-		build
+		fn_build
 	fi
 }
 fn_reposync() {
