@@ -270,6 +270,9 @@ run() {
 	shift
 	echo "$@" >> "$package"
 }
+get_cache() {
+	echo $cache
+}
 build(){
 	package="$1"
 	shift
@@ -285,12 +288,8 @@ buildas(){
 		mkdir /tmp/pkgs
 	fi
 	cd /tmp/pkgs
-	su $user -c "
-		print warn debug!
-		eval $@
-	"
-	mv /tmp/pkgs/* $cache/*
-	cd $cache
+	chown $user /tmp/pkgs
+	su $user -c "eval $@"
 	print building as $user done
 }
 fn_depask() {
