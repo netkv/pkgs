@@ -56,6 +56,6 @@ item fun https://raw.githubusercontent.com/Pan00Pernicek/exutil/master/fun/fun
 item source https://raw.githubusercontent.com/Pan00Pernicek/exutil/master/source/source
 	sys bin source execlineb
 build bashbox-git "git clone https://github.com/Pan00Pernicek/bashbox; cd bashbox; bash bxmerge bin; item_name=bashbox; fn_install bashbox; fn_makeconf"
-build bashbox-git-user item_name=bashbox; "buildas "git clone https://github.com/Pan00Pernicek/bashbox; cd bashbox; bash bxmerge bin;" cd bashbox; fn_install bashbox; fn_makeconf"
+build bashbox-git-user 'item_name=bashbox; buildas "git clone https://github.com/Pan00Pernicek/bashbox; cd bashbox; bash bxmerge bin;" cd bashbox; fn_install bashbox; fn_makeconf'
 
 fn_rawrepo
