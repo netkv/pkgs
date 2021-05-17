@@ -276,6 +276,23 @@ build(){
 	echo 'build=yes' >> "$package"
 	echo buildinfo="\""$@"\"" >> "$package"
 }
+buildas(){
+	pirnt debug debug!!!
+	echo enter non-root user for build procces
+	read user
+	echo enter password for $user
+	if [ ! -d /tmp/pkgs ]; then
+		mkdir /tmp/pkgs
+	fi
+	cd /tmp/pkgs
+	su $user -c "
+		print warn debug!
+		eval $buildinfo
+	"
+	mv /tmp/pkgs/* $cache/*
+	cd $cache
+	print building as $user done
+}
 fn_depask() {
 	print Do you want install $1 as optional dependency? "(y/n)"
 	if [ ask_fix = yes ]; then
