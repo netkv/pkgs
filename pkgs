@@ -277,7 +277,7 @@ build(){
 	echo buildinfo="\""$@"\"" >> "$package"
 }
 buildas(){
-	pirnt debug debug!!!
+	print debug debug!!!
 	echo enter non-root user for build procces
 	read user
 	echo enter password for $user
@@ -287,7 +287,7 @@ buildas(){
 	cd /tmp/pkgs
 	su $user -c "
 		print warn debug!
-		eval $buildinfo
+		eval $@
 	"
 	mv /tmp/pkgs/* $cache/*
 	cd $cache
